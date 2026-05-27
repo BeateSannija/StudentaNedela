@@ -145,3 +145,11 @@ ol {
   font-weight: 800;
   letter-spacing: -0.03em;
 }
+
+.hero-gradient {
+  background:
+    radial-gradient(circle at 82% 22%, rgba(171, 195, 226, 0.75) 0%, transparent 30%),
+    radial-gradient(circle at 28% 78%, rgba(151, 168, 60, 0.35) 0%, transparent 28%),
+    radial-gradient(circle at 78% 82%, rgba(76, 5, 12, 0.32) 0%, transparent 35%),
+    var(--color-bg);
+}

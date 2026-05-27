@@ -1,43 +1,86 @@
+const snacks = [
+  {
+    name: "Dateles + zemesriekstu sviests",
+    note: "Īsam enerģijas boostam.",
+  },
+  {
+    name: "Proteīna batoniņi",
+    note: "Kad starp lekcijām nav laika.",
+  },
+  {
+    name: "Avokado maizīte",
+    note: "Kad vajag ko sātīgāku.",
+  },
+  {
+    name: "Tumšā šokolāde",
+    note: "Jo būsim godīgi.",
+  },
+];
+
 export function FoodSection() {
-  const meals = [
-    'Ātras brokastis',
-    'Meal prep pusdienas',
-    'Makaroni ar pesto',
-    'Vakara gatavošana',
-  ]
-
   return (
-    <section id="food" className="section section-divider">
+    <section id="food" className="section section-divider overflow-hidden">
       <div className="container">
-        <div className="mb-10 space-y-4">
-          <h2 className="text-3xl font-semibold md:text-4xl">
-            Vegāna studenta maltītes
-          </h2>
+        <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="relative">
+            <div className="absolute -left-10 top-10 h-40 w-32 -rotate-6 bg-[var(--color-green)]" />
 
-          <p className="max-w-3xl text-lg text-[var(--color-muted)]">
-            Studiju nedēļā ēšana nav tikai "kaut kas pa vidu". Tā ir daļa no
-            ritma — ko var pagatavot ātri, ko var sagatavot iepriekš, un kas
-            dod enerģiju garām dienām.
-          </p>
-        </div>
+            <div className="relative border border-[var(--color-border)] bg-[var(--color-surface)] p-4 shadow-[0_14px_40px_rgba(31,39,71,0.06)]">
+              <img
+                src="/images/music-park.jpeg"
+                alt="Pagaidu attēls ēdiena flatlay vietā"
+                className="aspect-[4/5] w-full object-cover"
+              />
+            </div>
+          </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {meals.map((meal) => (
-            <article
-              key={meal}
-              className="rounded-3xl bg-[var(--color-surface)] p-5 shadow-sm"
-            >
-              <div className="mb-4 h-48 rounded-2xl bg-[var(--color-border)]" />
+          <div className="relative">
+            <div className="absolute -left-5 top-0 h-7 w-44 -rotate-2 bg-[var(--color-green)]" />
 
-              <h3 className="text-lg font-semibold">{meal}</h3>
+            <p className="relative text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">
+              Enerģija
+            </p>
 
-              <p className="mt-3 text-sm text-[var(--color-muted)]">
-                Placeholder apraksts maltītei.
-              </p>
-            </article>
-          ))}
+            <div className="relative mt-3 mb-2">
+              <div className="absolute bottom-[0.42em] left-[2.2em] h-3 w-[4.6em] -rotate-1 bg-[var(--color-green)] opacity-75" />
+
+              <h2 className="relative display-heading text-5xl font-bold leading-none text-[var(--color-primary)] md:text-7xl">
+                Mani mīļākie našķi
+              </h2>
+            </div>
+
+            <p className="mt-5 max-w-xl text-lg leading-8 text-[var(--color-muted)]">
+              Našķi starp lekcijām un pauzēs starp mācību sesijām ir svarīga
+              studenta dzīves daļa. Es piekopju augu valsts uzturu, kas nozīmē,
+              ka man ir vairāk jāpiedomā pie atļautajiem našķiem. Šie ir mani
+              mīļākie augu valsts našķi.
+            </p>
+
+            <div className="mt-5 border-t border-[var(--color-border)]">
+              {snacks.map((snack, index) => (
+                <article
+                  key={snack.name}
+                  className="group grid gap-4 border-b border-[var(--color-border)] py-6 sm:grid-cols-[64px_1fr]"
+                >
+                  <span className="text-sm font-bold tracking-[0.25em] text-[var(--color-primary)]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <div>
+                    <h3 className="text-2xl font-extrabold tracking-tight transition-colors duration-300 group-hover:text-[var(--color-primary)]">
+                      {snack.name}
+                    </h3>
+
+                    <p className="mt-2 text-[var(--color-muted)]">
+                      {snack.note}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

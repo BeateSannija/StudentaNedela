@@ -6,10 +6,12 @@ import { RelaxSection } from './components/RelaxSection'
 import { Footer } from './components/Footer'
 import { FoodSection } from './components/FoodSection'
 import { SoundtrackSection } from './components/SoundtrackSection'
+import { NavbarSection } from './components/Navbar'
 
 function App() {
   return (
     <main>
+      <NavbarSection/>
       <HeroSection />
       <BackpackSection />
       <JourneySection />

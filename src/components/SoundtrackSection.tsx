@@ -1,49 +1,68 @@
 const playlists = [
   {
-    title: 'Ceļā',
-    label: 'Atskaņošanas saraksts 01',
-    mood: 'Esot ceļā starp universitāti un mājām',
-    image: '/images/music-park.jpeg',
+    title: "Ceļā",
+    label: "Atskaņošanas saraksts 01",
+    mood: "Esot ceļā starp universitāti un mājām",
+    image: "/images/music-park.jpeg",
     songs: [
-      { title: 'Dancing with Myself', artist: 'Billy Idol, Generation X' },
-      { title: "It Ain't Over 'Til It's Over", artist: 'Lenny Kravitz' },
-      { title: 'Shake It Out', artist: 'Florence + The Machine' },
+      { title: "Dancing with Myself", artist: "Billy Idol, Generation X" },
+      { title: "It Ain't Over 'Til It's Over", artist: "Lenny Kravitz" },
+      { title: "Shake It Out", artist: "Florence + The Machine" },
     ],
   },
   {
-    title: 'Motivācijai',
-    label: 'Atskaņošanas saraksts 02',
-    mood: 'Mācības jāmīl :)',
-    image: '/images/music-park.jpeg',
+    title: "Motivācijai",
+    label: "Atskaņošanas saraksts 02",
+    mood: "Mācības jāmīl :)",
+    image: "/images/music-park.jpeg",
     songs: [
-      { title: 'Eye of the Tiger', artist: 'Survivor' },
-      { title: "Can't Stop", artist: 'Red Hot Chili Peppers' },
-      { title: 'BURN IT DOWN', artist: 'Linkin Park' },
+      { title: "Eye of the Tiger", artist: "Survivor" },
+      { title: "Can't Stop", artist: "Red Hot Chili Peppers" },
+      { title: "BURN IT DOWN", artist: "Linkin Park" },
     ],
   },
   {
-    title: 'Skrējienam',
-    label: 'Atskaņošanas saraksts 03',
-    mood: 'Kad jāskrien ātri',
-    image: '/images/music-park.jpeg',
+    title: "Skrējienam",
+    label: "Atskaņošanas saraksts 03",
+    mood: "Kad jāskrien ātri",
+    image: "/images/music-park.jpeg",
     songs: [
-      { title: 'Song 2', artist: 'Blur' },
-      { title: "Livin' On A Prayer", artist: 'Bon Jovi' },
-      { title: 'Shots', artist: 'Imagine Dragons' },
+      { title: "Song 2", artist: "Blur" },
+      { title: "Livin' On A Prayer", artist: "Bon Jovi" },
+      { title: "Shots", artist: "Imagine Dragons" },
     ],
   },
   {
-    title: 'Brīvs',
-    label: 'Atskaņošanas saraksts 04',
-    mood: 'Miers pēc garas dienas.',
-    image: '/images/music-park.jpeg',
+    title: "Brīvs",
+    label: "Atskaņošanas saraksts 04",
+    mood: "Miers pēc garas dienas.",
+    image: "/images/music-park.jpeg",
     songs: [
-      { title: "Knockin' On Heaven's Door nosaukums", artist: 'Bob Dylan' },
-      { title: "I've Seen It", artist: 'Olivia Dean' },
-      { title: 'Someone New', artist: 'Hozier' },
+      { title: "Free", artist: "Florence + The Machine" },
+      { title: "I've Seen It", artist: "Olivia Dean" },
+      { title: "Someone New", artist: "Hozier" },
     ],
   },
-]
+];
+
+function MusicIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-3.5 w-3.5 shrink-0"
+      aria-hidden="true"
+    >
+      <circle cx="8" cy="18" r="4" />
+      <path d="M12 18V2l7 4" />
+    </svg>
+  );
+}
 
 export function SoundtrackSection() {
   return (
@@ -54,51 +73,62 @@ export function SoundtrackSection() {
             Mūzika
           </p>
 
-          <h2 className="display-heading text-5xl font-bold leading-none text-[var(--color-primary)] md:text-7xl">
+          <h2 className="display-heading text-5xl font-bold leading-none text-[var(--color-primary)] md:text-6xl">
             Nedēļas ritmā
           </h2>
 
           <p className="mt-4 text-lg leading-8 text-[var(--color-muted)]">
-            Mūzika kā fons dažādiem nedēļas brīžiem — ceļam, fokusam,
-            skrējienam un vakaram.
+            Mūzika kā fons dažādiem nedēļas brīžiem — ceļam, fokusam, skrējienam
+            un vakaram.
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-7 lg:grid-cols-2">
           {playlists.map((playlist) => (
             <article
               key={playlist.title}
-              className="grid gap-5 rounded-[2rem] bg-[var(--color-surface)] p-5 shadow-sm sm:grid-cols-[180px_1fr]"
+              className="group grid gap-5 rounded-[18px] border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-4 shadow-[0_10px_30px_rgba(31,39,71,0.04)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(31,39,71,0.08)] sm:grid-cols-[170px_1fr] sm:p-5"
             >
-              <img
-                src={playlist.image}
-                alt={`${playlist.title} atskaņošanas saraksta noskaņas attēls`}
-                className="aspect-square w-full rounded-[1.5rem] object-cover"
-              />
+              <div className="aspect-square overflow-hidden rounded-[14px]">
+                <img
+                  src={playlist.image}
+                  alt={`${playlist.title} atskaņošanas saraksta noskaņas attēls`}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+              </div>
 
-              <div className="flex flex-col justify-between gap-6">
+              <div className="flex flex-col justify-start">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--color-muted)]">
+                  <p className="text-[0.65rem] font-bold uppercase tracking-[0.28em] text-[var(--color-primary)]">
                     {playlist.label}
                   </p>
 
-                  <h3 className="mt-2 text-2xl font-extrabold">
+                  <h3 className="mt-1.5 text-3xl font-extrabold leading-tight tracking-tight md:text-4xl">
                     {playlist.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-6 text-[var(--color-muted)]">
+                  <p className="mt-2 max-w-md text-sm leading-6 text-[var(--color-muted)]">
                     {playlist.mood}
                   </p>
                 </div>
 
-                <div className="space-y-3">
+                <div className="mt-3 space-y-0 border-t border-[var(--color-border)] pt-0 transition-colors duration-300 group-hover:border-[var(--color-primary)]/35">
                   {playlist.songs.map((song, index) => (
                     <div
                       key={`${playlist.title}-${index}`}
-                      className="flex items-center justify-between border-t border-[var(--color-border)] pt-3 text-sm"
+                      className="flex items-center justify-between gap-4 border-b border-[var(--color-border)] py-2.5 text-sm last:border-b-0"
                     >
-                      <span>{song.title}</span>
-                      <span className="text-[var(--color-muted)]">
+                      <div className="flex min-w-0 items-center gap-2.5">
+                        <span className="text-[var(--color-primary)]">
+                          <MusicIcon />
+                        </span>
+
+                        <span className="truncate font-medium">
+                          {song.title}
+                        </span>
+                      </div>
+
+                      <span className="shrink-0 text-right text-[var(--color-muted)]">
                         {song.artist}
                       </span>
                     </div>
@@ -110,5 +140,5 @@ export function SoundtrackSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
