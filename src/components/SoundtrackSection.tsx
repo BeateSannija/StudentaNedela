@@ -68,26 +68,26 @@ export function SoundtrackSection() {
   return (
     <section id="soundtrack" className="section section-divider">
       <div className="container">
-        <div className="mb-12 max-w-3xl">
+        <div className="mb-6 max-w-2xl">
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-muted)]">
             Mūzika
           </p>
 
-          <h2 className="display-heading text-5xl font-bold leading-none text-[var(--color-primary)] md:text-6xl">
+          <h2 className="display-heading text-4xl font-bold leading-[1.2] text-[var(--color-primary)] md:text-6xl">
             Nedēļas ritmā
           </h2>
 
-          <p className="mt-4 text-lg leading-8 text-[var(--color-muted)]">
+          <p className="mt-8 max-w-2xl text-base leading-7 text-[var(--color-muted)]">
             Mūzika kā fons dažādiem nedēļas brīžiem — ceļam, fokusam, skrējienam
             un vakaram.
           </p>
         </div>
 
-        <div className="grid gap-7 lg:grid-cols-2">
+        <div className="mt-2 grid gap-6 lg:grid-cols-2">
           {playlists.map((playlist) => (
             <article
               key={playlist.title}
-              className="group grid gap-5 rounded-[18px] border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-4 shadow-[0_10px_30px_rgba(31,39,71,0.04)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(31,39,71,0.08)] sm:grid-cols-[170px_1fr] sm:p-5"
+              className="group grid gap-4 rounded-[16px] border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-4 shadow-[0_8px_24px_rgba(31,39,71,0.04)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(31,39,71,0.07)] sm:grid-cols-[145px_1fr]"
             >
               <div className="aspect-square overflow-hidden rounded-[14px]">
                 <img
@@ -103,7 +103,7 @@ export function SoundtrackSection() {
                     {playlist.label}
                   </p>
 
-                  <h3 className="mt-1.5 text-3xl font-extrabold leading-tight tracking-tight md:text-4xl">
+                  <h3 className="mt-1 text-2xl font-extrabold leading-tight tracking-tight md:text-3xl">
                     {playlist.title}
                   </h3>
 
@@ -116,7 +116,7 @@ export function SoundtrackSection() {
                   {playlist.songs.map((song, index) => (
                     <div
                       key={`${playlist.title}-${index}`}
-                      className="flex items-center justify-between gap-4 border-b border-[var(--color-border)] py-2.5 text-sm last:border-b-0"
+                      className="flex items-center justify-between gap-4 border-b border-[var(--color-border)] py-2 text-[0.85rem] last:border-b-0"
                     >
                       <div className="flex min-w-0 items-center gap-2.5">
                         <span className="text-[var(--color-primary)]">
