@@ -3,7 +3,7 @@ const playlists = [
     title: "Ceļā",
     label: "Atskaņošanas saraksts 01",
     mood: "Esot ceļā starp universitāti un mājām",
-    image: "/images/music-park.jpeg",
+    image: "/images/soundtrack-road.jpeg",
     songs: [
       { title: "Dancing with Myself", artist: "Billy Idol, Generation X" },
       { title: "It Ain't Over 'Til It's Over", artist: "Lenny Kravitz" },
@@ -25,7 +25,7 @@ const playlists = [
     title: "Skrējienam",
     label: "Atskaņošanas saraksts 03",
     mood: "Kad jāskrien ātri",
-    image: "/images/music-park.jpeg",
+    image: "/images/soundtrack-run.jpeg",
     songs: [
       { title: "Song 2", artist: "Blur" },
       { title: "Livin' On A Prayer", artist: "Bon Jovi" },
@@ -36,7 +36,7 @@ const playlists = [
     title: "Brīvs",
     label: "Atskaņošanas saraksts 04",
     mood: "Miers pēc garas dienas.",
-    image: "/images/music-park.jpeg",
+    image: "/images/soundtrack-rest.jpeg",
     songs: [
       { title: "Free", artist: "Florence + The Machine" },
       { title: "I've Seen It", artist: "Olivia Dean" },

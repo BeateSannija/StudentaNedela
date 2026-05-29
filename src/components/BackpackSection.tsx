@@ -1,46 +1,90 @@
-export function BackpackSection() {
-  const items = [
-    'Portatīvais dators',
-    'Piezīmju klade',
-    'Ūdens pudele',
-    'Austiņas',
-    'Lādētājs',
-    'Studentu apliecība',
-  ]
+const bagItems = [
+  {
+    number: "01",
+    title: "Dators",
+    description: "Lenovo Yoga un studiju darbi.",
+  },
+  {
+    number: "02",
+    title: "Ūdens pudele",
+    description: "Vienmēr līdzi lekcijās.",
+  },
+  {
+    number: "03",
+    title: "Austiņas",
+    description: "Fokusam, mūzikai un ceļam.",
+  },
+  { number: "04", title: "Našķis", description: "Enerģijai starp lekcijām." },
+  {
+    number: "05",
+    title: "Roku krēms",
+    description: "Ikdienas nepieciešamība.",
+  },
+  { number: "06", title: "Lūpu balzāms", description: "Vienmēr somā." },
+  {
+    number: "07",
+    title: "Dezinfekcijas līdzeklis",
+    description: "Ātrai roku dezinfekcijai.",
+  },
+  { number: "08", title: "Atslēgas", description: "Lai tiktu mājās." },
+];
 
+export function BackpackSection() {
   return (
     <section id="backpack" className="section section-divider">
       <div className="container">
-        <h2 className="mb-10 text-3xl font-semibold md:text-4xl">
-          Kas ir manā mugursomā?
-        </h2>
+        <div className="mb-14 max-w-3xl">
+          <div className="relative inline-block">
+            <div className="absolute -left-4 top-0 h-7 w-36 rotate-1 bg-[var(--color-green)]" />
 
-        <div className="grid items-center gap-10 md:grid-cols-[1fr_280px_1fr]">
-          <div className="space-y-6">
-            {items.slice(0, 3).map((item) => (
-              <div
-                key={item}
-                className="rounded-2xl bg-[var(--color-surface)] p-5 shadow-sm"
-              >
-                <p className="font-medium">{item}</p>
-              </div>
-            ))}
+            <p className="relative text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">
+              Soma
+            </p>
           </div>
 
-          <div className="placeholder-circle mx-auto h-64 w-64" />
+          <h2 className="mt-5 display-heading text-4xl font-bold leading-[1.02] text-[var(--color-primary)] md:text-6xl">
+            Kas ir manā mugursomā?
+          </h2>
 
-          <div className="space-y-6">
-            {items.slice(3).map((item) => (
-              <div
-                key={item}
-                className="rounded-2xl bg-[var(--color-surface)] p-5 shadow-sm"
+          <p className="mt-5 max-w-2xl text-base leading-7 text-[var(--color-muted)]">
+            Lietas, kas gandrīz vienmēr ceļo līdzi — studijām, ceļam un mazām
+            pauzēm starp lekcijām.
+          </p>
+        </div>
+
+        <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+          <div className="border border-[var(--color-border)] bg-[var(--color-surface)] p-3 shadow-[0_12px_34px_rgba(31,39,71,0.05)]">
+            <img
+              src="/images/backpack.jpg"
+              alt="Flatlay attēls ar ikdienā līdzi esošām lietām"
+              className="w-full object-cover"
+            />
+          </div>
+
+          <div className="grid auto-rows-fr gap-x-8 border-t border-[var(--color-border)] sm:grid-cols-2">
+            {bagItems.map((item) => (
+              <article
+                key={item.number}
+                className="grid min-h-[120px] grid-cols-[42px_1fr] gap-3 border-b border-[var(--color-border)] py-4"
               >
-                <p className="font-medium">{item}</p>
-              </div>
+                <span className="grid h-7 w-7 place-items-center rounded-full border border-[var(--color-primary)] text-[0.65rem] font-extrabold text-[var(--color-primary)]">
+                  {item.number}
+                </span>
+
+                <div>
+                  <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-text)]">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-1.5 text-sm leading-6 text-[var(--color-muted)]">
+                    {item.description}
+                  </p>
+                </div>
+              </article>
             ))}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
