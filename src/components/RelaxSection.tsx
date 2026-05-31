@@ -27,7 +27,7 @@ const hobbies = [
     image: "/images/relax-cook.jpg",
     imagePosition: 'object-center',
     description: [
-      "Tā kā piekopju augu valsts uzturu man nākas daudz gatavot. Lai gan man vienmēr ir paticis gatavot. "  +
+      "Tā kā piekopju augu valsts uzturu man nākas daudz gatavot. "  +
       "Tāpat man patīk apmeklēt jaunas vietas, kur var garšīgi paēst un pasūtīt ko tādu, ko vēlāk varētu mēģināt atdarināt un ieviest savā ēdienkārtē"
     ]
   },

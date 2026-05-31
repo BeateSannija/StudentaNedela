@@ -15,6 +15,7 @@ const events = [
     time: "10:30–12:10",
     start: 10.5,
     end: 12.16,
+    category: "studies",
   },
   {
     day: "Otrdiena",
@@ -22,6 +23,7 @@ const events = [
     time: "09:00–10:00",
     start: 9,
     end: 10,
+    category: "sports",
   },
   {
     day: "Otrdiena",
@@ -29,6 +31,7 @@ const events = [
     time: "14:30–16:10",
     start: 14.5,
     end: 16.16,
+    category: "studies",
   },
   {
     day: "Otrdiena",
@@ -36,6 +39,7 @@ const events = [
     time: "16:30–18:05",
     start: 16.5,
     end: 18.08,
+    category: "studies",
   },
   {
     day: "Trešdiena",
@@ -43,6 +47,7 @@ const events = [
     time: "08:30–10:10",
     start: 8.5,
     end: 10.16,
+    category: "studies",
   },
   {
     day: "Trešdiena",
@@ -50,6 +55,7 @@ const events = [
     time: "10:30–12:10",
     start: 10.5,
     end: 12.16,
+    category: "studies",
   },
   {
     day: "Trešdiena",
@@ -57,6 +63,7 @@ const events = [
     time: "14:30–16:10",
     start: 14.5,
     end: 16.16,
+    category: "studies",
   },
   {
     day: "Trešdiena",
@@ -64,6 +71,7 @@ const events = [
     time: "16:30–18:10",
     start: 16.5,
     end: 18.16,
+    category: "studies",
   },
   {
     day: "Ceturtdiena",
@@ -71,6 +79,7 @@ const events = [
     time: "09:00–10:00",
     start: 9,
     end: 10,
+    category: "sports",
   },
   {
     day: "Ceturtdiena",
@@ -78,6 +87,7 @@ const events = [
     time: "15:00–16:00",
     start: 15,
     end: 16,
+    category: "private",
   },
   {
     day: "Ceturtdiena",
@@ -85,6 +95,7 @@ const events = [
     time: "16:30–19:50",
     start: 16.5,
     end: 19.83,
+    category: "studies",
   },
   {
     day: "Piektdiena",
@@ -92,6 +103,7 @@ const events = [
     time: "08:30–10:00",
     start: 8.5,
     end: 10,
+    category: "sports",
   },
   {
     day: "Piektdiena",
@@ -99,6 +111,7 @@ const events = [
     time: "14:30–16:10",
     start: 14.5,
     end: 16.16,
+    category: "private",
   },
   {
     day: "Svētdiena",
@@ -106,18 +119,37 @@ const events = [
     time: "09:00–11:00",
     start: 9,
     end: 11,
+    category: "sports",
   },
+];
+
+const legendItems = [
+  { label: "Studijas", className: "bg-[rgba(171,195,226,0.42)]" },
+  { label: "Sports", className: "bg-[rgba(151,168,60,0.34)]" },
+  { label: "Privātstundas", className: "bg-[rgba(76,5,12,0.14)]" },
 ];
 
 const startHour = 8;
 const endHour = 20;
-const hourHeight = 72;
+const hourHeight = 52;
 
 function getEventStyle(start: number, end: number) {
   return {
     top: `${(start - startHour) * hourHeight}px`,
     height: `${(end - start) * hourHeight}px`,
   };
+}
+
+function getEventClass(category: string) {
+  if (category === "sports") {
+    return "bg-[rgba(151,168,60,0.34)]";
+  }
+
+  if (category === "private") {
+    return "bg-[rgba(76,5,12,0.14)]";
+  }
+
+  return "bg-[rgba(171,195,226,0.42)]";
 }
 
 export function ScheduleSection() {
@@ -139,14 +171,26 @@ export function ScheduleSection() {
           </p>
         </div>
 
-        <div className="overflow-x-auto rounded-[2rem] border border-[var(--color-border)] bg-[var(--color-surface)] p-4 shadow-sm">
+        <div className="mb-5 flex flex-wrap gap-3">
+          {legendItems.map((item) => (
+            <div
+              key={item.label}
+              className="flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)]/70 px-4 py-2 text-sm font-semibold text-[var(--color-muted)]"
+            >
+              <span className={`h-3 w-3 rounded-full ${item.className}`} />
+              {item.label}
+            </div>
+          ))}
+        </div>
+
+        <div className="overflow-x-auto rounded-[1.5rem] border border-[var(--color-border)] bg-[var(--color-surface)]/70 p-4 shadow-sm">
           <div className="min-w-[980px]">
             <div className="grid grid-cols-[72px_repeat(7,1fr)]">
               <div />
               {days.map((day) => (
                 <div
                   key={day}
-                  className="border-b border-[var(--color-border)] px-3 py-4 text-center text-sm font-extrabold uppercase tracking-wide"
+                  className="border-b border-[var(--color-border)] px-3 py-3 text-center text-xs font-extrabold uppercase tracking-wide"
                 >
                   {day}
                 </div>
@@ -155,7 +199,7 @@ export function ScheduleSection() {
 
             <div
               className="relative grid grid-cols-[72px_repeat(7,1fr)]"
-              style={{ height: `${(endHour - startHour) * hourHeight + 32}px` }}
+              style={{ height: `${(endHour - startHour) * hourHeight + 18}px` }}
             >
               <div className="relative border-r border-[var(--color-border)]">
                 {Array.from({ length: endHour - startHour + 1 }, (_, index) => {
@@ -164,7 +208,7 @@ export function ScheduleSection() {
                   return (
                     <div
                       key={hour}
-                      className="absolute left-0 flex w-full -translate-y-1/2  justify-center text-xs font-semibold text-[var(--color-muted)]"
+                      className="absolute left-0 flex w-full -translate-y-1/2 justify-center text-xs font-semibold text-[var(--color-muted)]"
                       style={{ top: `${index * hourHeight}px` }}
                     >
                       {hour}:00
@@ -191,13 +235,15 @@ export function ScheduleSection() {
                     .map((event) => (
                       <article
                         key={`${event.day}-${event.title}-${event.time}`}
-                        className="absolute left-2 right-2 rounded-2xl bg-[var(--color-blue)] p-3 text-sm shadow-sm"
+                        className={`absolute left-1.5 right-1.5 rounded-xl border border-white/40 p-2 text-xs shadow-[0_6px_16px_rgba(31,39,71,0.06)] ${getEventClass(
+                          event.category
+                        )}`}
                         style={getEventStyle(event.start, event.end)}
                       >
                         <h3 className="font-extrabold leading-tight">
                           {event.title}
                         </h3>
-                        <p className="mt-1 text-xs font-semibold">
+                        <p className="mt-0.5 text-[0.68rem] font-semibold text-[var(--color-muted)]">
                           {event.time}
                         </p>
                       </article>
