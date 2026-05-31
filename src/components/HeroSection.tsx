@@ -24,7 +24,8 @@ export function HeroSection() {
                   Datorikas nodaļas studenta dzīvē
                 </h2>
 
-                <p className="text-lg leading-8 text-[var(--color-muted)]">
+              {/* TODO: mazāku atstarpi */}
+                <p className="text-lg leading-8 text-[var(--color-muted)] indent-6">
                   Personisks ieskats studiju nedēļā — no digitālās darba vides
                   un ceļa uz universitāti līdz maltītēm, mūzikai un atpūtai.
                 </p>

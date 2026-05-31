@@ -14,7 +14,7 @@ const playlists = [
     title: "Motivācijai",
     label: "Atskaņošanas saraksts 02",
     mood: "Mācības jāmīl :)",
-    image: "/images/music-park.jpeg",
+    image: "/images/soundtrack-motivation.jpg",
     songs: [
       { title: "Eye of the Tiger", artist: "Survivor" },
       { title: "Can't Stop", artist: "Red Hot Chili Peppers" },
@@ -25,7 +25,7 @@ const playlists = [
     title: "Skrējienam",
     label: "Atskaņošanas saraksts 03",
     mood: "Kad jāskrien ātri",
-    image: "/images/soundtrack-run.jpeg",
+    image: "/images/soundtrack-run2.jpg",
     songs: [
       { title: "Song 2", artist: "Blur" },
       { title: "Livin' On A Prayer", artist: "Bon Jovi" },

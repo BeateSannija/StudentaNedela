@@ -46,7 +46,7 @@ export function FoodSection() {
               </h2>
             </div>
 
-            <p className="mt-4 max-w-lg text-base leading-7 text-[var(--color-muted)]">
+            <p className="mt-4 max-w-lg text-base leading-7 text-[var(--color-muted)] indent-8">
               Našķi starp lekcijām un pauzēs starp mācību sesijām ir svarīga
               studenta dzīves daļa. Es piekopju augu valsts uzturu, kas nozīmē,
               ka man ir vairāk jāpiedomā pie atļautajiem našķiem. Šie ir mani
