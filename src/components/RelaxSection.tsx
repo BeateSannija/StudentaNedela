@@ -17,15 +17,18 @@ const hobbies = [
     image: "/images/relax-read.jpg",
     imagePosition: 'object-center',
     description: [
-      "Mierīgs laiks sev, kas ļauj atslēgties no ekrāniem un ikdienas steigas."
+      "Lasīšanas ir veids kā es patiešām atpūšos. " +
+      "Tas ir laiks sev, kad varu pilnībā iegrimt citā pasaulē un uz brīdi aizmirst par termiņiem un studiju darbiem. " +
+      "Visbiežāk izvēlos fantāziju vai zinātnisko fantastiku. "
       ]
   },
   {
     title: "Gatavošana",
-    image: "/images/relax-somt.jpeg",
+    image: "/images/relax-cook.jpg",
     imagePosition: 'object-center',
     description: [
-      "Iespēja izmēģināt jaunas receptes un sagatavot sev iecienītos augu valsts ēdienus."
+      "Tā kā piekopju augu valsts uzturu man nākas daudz gatavot. Lai gan man vienmēr ir paticis gatavot. "  +
+      "Tāpat man patīk apmeklēt jaunas vietas, kur var garšīgi paēst un pasūtīt ko tādu, ko vēlāk varētu mēģināt atdarināt un ieviest savā ēdienkārtē"
     ]
   },
   {
@@ -33,15 +36,17 @@ const hobbies = [
     image: "/images/relax-friends.jpeg",
     imagePosition: 'object-center',
     description: [
-      "Svarīga nedēļas daļa, kas palīdz atpūsties un pavadīt laiku ārpus studiju vides."
+      "Nedēļa nebūtu pilnīga bez laika, ko pavadu kopā ar draugiem. " +
+      "Lai gan satiekamies universitātē, kur kopā pavadām daudz laika, cenšamies satikties arī pēc iespējas biežāk " +
+      "ārpus studijām."
     ]
   },
 ];
 
 export function RelaxSection() {
   return (
-    <section id="relax" className="section section-divider">
-      <div className="container">
+    <section id="relax" className="section">
+      <div className="container" >
         <div className="mb-14 max-w-3xl">
           <div className="relative inline-block">
             <div className="absolute -left-4 top-0 h-7 w-44 -rotate-1 bg-[var(--color-green)]" />

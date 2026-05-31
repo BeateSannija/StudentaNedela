@@ -1,6 +1,6 @@
 export function JourneySection() {
   return (
-    <section id="route" className="section section-divider">
+    <section id="route" className="section">
       <div className="container">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div className="space-y-6">
@@ -24,6 +24,6 @@ export function JourneySection() {
           <div className="placeholder-box h-[420px]" />
         </div>
       </div>
-    </section>
+     </section>
   )
 }

@@ -19,11 +19,11 @@ const snacks = [
 
 export function FoodSection() {
   return (
-    <section id="food" className="section section-divider overflow-hidden">
+    <section id="food" className="food-gradient relative overflow-hidden pb-20 pt-24">
       <div className="container">
         <div className="grid gap-8 lg:grid-cols-[0.92fr_1fr] lg:items-center">
           <div className="relative flex min-h-[420px] items-center justify-center overflow-visible">
-            <div className="pointer-events-none absolute -left-40 -top-32 h-[760px] w-[900px] bg-[radial-gradient(circle_at_38%_38%,rgba(171,195,226,0.9)_0%,transparent_34%),radial-gradient(circle_at_35%_68%,rgba(151,168,60,0.42)_0%,transparent_34%),radial-gradient(circle_at_70%_72%,rgba(76,5,12,0.34)_0%,transparent_38%)] blur-3xl" />
+            <div className="pointer-events-none absolute -left-40 -top-32 h-[760px] w-[900px] bg-[radial-gradient(circle_at_75%_65%,rgba(171,195,226,0.9)_0%,transparent_40%),radial-gradient(circle_at_25%_68%,rgba(151,168,60,0.42)_0%,transparent_34%),radial-gradient(circle_at_40%_32%,rgba(76,5,12,0.34)_0%,transparent_30%)] blur-3xl" />
 
   <img
     src="/images/cupcake-black.png"

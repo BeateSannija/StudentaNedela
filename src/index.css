@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
 @import "tailwindcss";
 
 /* ========================================
@@ -16,8 +16,8 @@
   --color-green: #97a83c;
   --color-border: #d8d6d3;
 
-  --font-body: 'Manrope', sans-serif;
-  --font-display: 'Playfair Display', serif;
+  --font-body: "Manrope", sans-serif;
+  --font-display: "Playfair Display", serif;
 
   --max-width: 1200px;
   --section-spacing: 6rem;
@@ -119,20 +119,12 @@ ol {
 }
 
 .placeholder-box {
-  background: linear-gradient(
-    135deg,
-    var(--color-border),
-    var(--color-blue)
-  );
+  background: linear-gradient(135deg, var(--color-border), var(--color-blue));
   border-radius: 1rem;
 }
 
 .placeholder-circle {
-  background: linear-gradient(
-    135deg,
-    var(--color-border),
-    var(--color-blue)
-  );
+  background: linear-gradient(135deg, var(--color-border), var(--color-blue));
   border-radius: 9999px;
 }
 
@@ -148,8 +140,48 @@ ol {
 
 .hero-gradient {
   background:
-    radial-gradient(circle at 82% 22%, rgba(171, 195, 226, 0.75) 0%, transparent 30%),
-    radial-gradient(circle at 28% 78%, rgba(151, 168, 60, 0.35) 0%, transparent 28%),
-    radial-gradient(circle at 78% 82%, rgba(76, 5, 12, 0.32) 0%, transparent 35%),
+    radial-gradient(
+      circle at 82% 22%,
+      rgba(171, 195, 226, 0.75) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 28% 78%,
+      rgba(151, 168, 60, 0.35) 0%,
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 78% 82%,
+      rgba(76, 5, 12, 0.32) 0%,
+      transparent 35%
+    ),
+    var(--color-bg);
+
+  mask-image: linear-gradient(to bottom, black 0%, black 75%, transparent 100%);
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 75%,
+    transparent 100%
+  );
+}
+
+.food-gradient {
+  mask-image: linear-gradient(to bottom, black 0%, black 82%, transparent 100%);
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 80%,
+    transparent 100%
+  );
+}
+
+.soundtrack-relax-region {
+  background:
+    radial-gradient(circle at 15% 35%, rgba(151,168,60,0.40) 0%, transparent 20%),
+    radial-gradient(circle at 65% 30%, rgba(171,195,226,0.70) 0%, transparent 18%),
+    radial-gradient(circle at 85% 25%, rgba(76,5,12,0.40) 0%, transparent 20%),
     var(--color-bg);
 }

@@ -122,7 +122,7 @@ function getEventStyle(start: number, end: number) {
 
 export function ScheduleSection() {
   return (
-    <section id="schedule" className="section section-divider">
+    <section id="schedule" className="section">
       <div className="container">
         <div className="mb-10 max-w-3xl space-y-4">
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-muted)]">

@@ -1,27 +1,31 @@
-import { HeroSection } from './components/HeroSection'
-import { BackpackSection } from './components/BackpackSection'
-import { JourneySection } from './components/JourneySection'
-import { ScheduleSection } from './components/ScheduleSection'
-import { RelaxSection } from './components/RelaxSection'
-import { Footer } from './components/Footer'
-import { FoodSection } from './components/FoodSection'
-import { SoundtrackSection } from './components/SoundtrackSection'
-import { NavbarSection } from './components/Navbar'
+import { HeroSection } from "./components/HeroSection";
+import { BackpackSection } from "./components/BackpackSection";
+import { JourneySection } from "./components/JourneySection";
+import { ScheduleSection } from "./components/ScheduleSection";
+import { RelaxSection } from "./components/RelaxSection";
+import { Footer } from "./components/Footer";
+import { FoodSection } from "./components/FoodSection";
+import { SoundtrackSection } from "./components/SoundtrackSection";
+import { NavbarSection } from "./components/Navbar";
 
 function App() {
   return (
     <main>
-      <NavbarSection/>
+      <NavbarSection />
       <HeroSection />
       <BackpackSection />
       <JourneySection />
       <ScheduleSection />
       <FoodSection />
-      <SoundtrackSection />
-      <RelaxSection />
+
+      <div className="soundtrack-relax-region">
+        <SoundtrackSection />
+        <RelaxSection />
+      </div>
+
       <Footer />
     </main>
-  )
+  );
 }
 
-export default App
+export default App;
