@@ -7,31 +7,61 @@ export function Footer() {
             <p className="mb-3 text-sm font-extrabold uppercase tracking-[0.3em] text-[var(--color-primary)]">
               Studenta nedēļa
             </p>
-            <p className="mt-8 text-sx leading-[1.6] text-[var(--color-muted)]">
-              Neliels ieskats datorikas studetnta nedēļā
+            <p className="mt-8 text-s leading-[1.6] text-[var(--color-muted)]">
+              Neliels ieskats datorikas studenta nedēļā
             </p>
           </div>
 
           <div className="space-y-5 md:text-right">
-            <nav>
+            <nav aria-label="Kājenes navigācija">
               <ul className="flex flex-wrap gap-4 text-sm font-bold md:justify-end">
                 <li>
-                  <a href="#backpack">Soma</a>
+                  <a
+                    href="#backpack"
+                    className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
+                  >
+                    Soma
+                  </a>
                 </li>
                 <li>
-                  <a href="#route">Ceļš</a>
+                  <a
+                    href="#route"
+                    className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
+                  >
+                    Ceļš
+                  </a>
                 </li>
                 <li>
-                  <a href="#schedule">Grafiks</a>
+                  <a
+                    href="#schedule"
+                    className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
+                  >
+                    Grafiks
+                  </a>
                 </li>
                 <li>
-                  <a href="#food">Našķi</a>
+                  <a
+                    href="#food"
+                    className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
+                  >
+                    Našķi
+                  </a>
                 </li>
                 <li>
-                  <a href="#soundtrack">Mūzika</a>
+                  <a
+                    href="#soundtrack"
+                    className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
+                  >
+                    Mūzika
+                  </a>
                 </li>
                 <li>
-                  <a href="#relax">Atpūta</a>
+                  <a
+                    href="#relax"
+                    className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
+                  >
+                    Atpūta
+                  </a>
                 </li>
               </ul>
             </nav>

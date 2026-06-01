@@ -12,18 +12,20 @@ export function HeroSection() {
                 LU / Datorikas nodaļa / darba nedēļa
               </p>
 
-              <h1 className="display-heading text-[3.8rem] font-extrabold leading-[0.85] tracking-tight text-[var(--color-primary)] sm:text-[5.5rem] md:text-[7.5rem]">
-                Viena
-                <br />
-                darba
-                <br />
-                nedēļa
-              </h1>
+              <div className="pt-6 md:pt-0">
+                <h1 className="display-heading text-[3.8rem] font-extrabold leading-[0.85] tracking-tight text-[var(--color-primary)] sm:text-[5.5rem] md:text-[7.5rem]">
+                  Viena
+                  <br />
+                  darba
+                  <br />
+                  nedēļa
+                </h1>
+              </div>
 
               <div className="my-8 flex justify-center lg:hidden">
                 <img
                   src={`${import.meta.env.BASE_URL}images/coding-black.png`}
-                  alt="Studenta ilustrācija"
+                  aria-hidden="true"
                   className="w-52 opacity-80"
                 />
               </div>
@@ -41,7 +43,10 @@ export function HeroSection() {
                 <div className="mt-7 flex flex-wrap gap-3">
                   <a
                     href="#backpack"
-                    className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface)]/55 px-6 py-3 font-bold shadow-[0_10px_30px_rgba(31,39,71,0.08)] backdrop-blur-xl transition duration-200 hover:-translate-y-0.5 hover:text-[var(--color-primary)]"
+                    className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface)]/55 px-6 py-3 font-bold shadow-[0_10px_30px_rgba(31,39,71,0.08)] backdrop-blur-xl transition duration-200 hover:-translate-y-0.5 hover:text-[var(--color-primary)] focus-visible:outline
+                    focus-visible:outline-2
+                    focus-visible:outline-offset-4
+                    focus-visible:outline-[var(--color-primary)]"
                   >
                     Sākt apskati
                   </a>
@@ -52,7 +57,7 @@ export function HeroSection() {
             <div className="relative hidden items-center justify-center lg:flex">
               <img
                 src={`${import.meta.env.BASE_URL}images/coding-black.png`}
-                alt="Studenta ilustrācija"
+                aria-hidden="true"
                 className="h-auto w-[430px] object-contain opacity-95"
               />
             </div>

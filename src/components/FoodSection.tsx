@@ -30,7 +30,7 @@ export function FoodSection() {
 
             <img
               src={`${import.meta.env.BASE_URL}images/cupcake-black.png`}
-              alt="Melnbalta kēksiņa ilustrācija"
+              aria-hidden="true"
               className="relative z-10 mx-auto h-auto max-h-[280px] w-auto object-contain opacity-95"
             />
           </div>

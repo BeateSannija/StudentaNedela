@@ -56,7 +56,7 @@ export function BackpackSection() {
           <div className="border border-[var(--color-border)] bg-[var(--color-surface)] p-3 shadow-[0_12px_34px_rgba(31,39,71,0.05)]">
             <img
               src={`${import.meta.env.BASE_URL}images/backpack.jpg`}
-              alt="Flatlay attēls ar ikdienā līdzi esošām lietām"
+              alt="Mugursomas saturs: dators, ūdens pudele, austiņas, našķi, roku krēms, lūpu balzāms, dezinfekcijas līdzeklis un atslēgas"
               className="w-full object-cover"
             />
           </div>

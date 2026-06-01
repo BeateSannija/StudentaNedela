@@ -4,7 +4,6 @@ const navItems = [
   { label: "Sākums", href: "#home" },
   { label: "Soma", href: "#backpack" },
   { label: "Ceļš", href: "#route" },
-  { label: "Ceļš", href: "#route" },
   { label: "Grafiks", href: "#schedule" },
   { label: "Našķi", href: "#food" },
   { label: "Mūzika", href: "#soundtrack" },
@@ -19,8 +18,10 @@ export function NavbarSection() {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="relative z-50 rounded-full border border-white/30 bg-white/40 p-3 text-slate-700 backdrop-blur-xl md:hidden"
-        aria-label="Atvērt navigāciju"
+        className="relative z-50 rounded-full border border-white/30 bg-white/40 p-3 text-slate-700 backdrop-blur-xl md:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
+        aria-label={isOpen ? "Aizvērt navigāciju" : "Atvērt navigāciju"}
+        aria-expanded={isOpen}
+        aria-controls="mobile-navigation"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -39,13 +40,16 @@ export function NavbarSection() {
         </svg>
       </button>
 
-      <nav className="hidden rounded-full border border-white/30 bg-white/40 px-5 py-3 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl md:block">
+      <nav
+        aria-label="Galvenā navigācija"
+        className="hidden rounded-full border border-white/30 bg-white/40 px-5 py-3 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl md:block"
+      >
         <ul className="flex items-center gap-5 text-sm font-bold">
           {navItems.map((item) => (
             <li key={item.href}>
               <a
                 href={item.href}
-                className="transition-colors duration-200 hover:text-[var(--color-primary)]"
+                className="transition-colors duration-200 hover:text-[var(--color-primary)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
               >
                 {item.label}
               </a>
@@ -63,14 +67,18 @@ export function NavbarSection() {
             aria-label="Aizvērt navigāciju"
           />
 
-          <nav className="absolute right-0 top-0 h-full w-52 bg-stone-50/80 px-8 py-20 shadow-xl">
+          <nav
+            id="mobile-navigation"
+            aria-label="Mobilā navigācija"
+            className="absolute right-0 top-0 h-full w-52 bg-stone-50/80 px-8 py-20 shadow-xl"
+          >
             <ul className="space-y-6 text-right text-xl font-bold">
               {navItems.map((item) => (
                 <li key={item.href}>
                   <a
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="block hover:text-[var(--color-primary)]"
+                    className="block hover:text-[var(--color-primary)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
                   >
                     {item.label}
                   </a>

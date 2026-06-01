@@ -2,6 +2,7 @@ const hobbies = [
   {
     title: "Skriešana",
     image: "/images/soundtrack-run.jpeg",
+    alt: "Cilvēka kājas, ejot pa skrējceliņu stadionā",
     imagePosition: "object-[center_73%]",
     imageSize: "large",
     description: [
@@ -15,6 +16,7 @@ const hobbies = [
   {
     title: "Lasīšana",
     image: "/images/relax-read.jpg",
+    alt: "Atvērta grāmata lasīšanas laikā",
     imagePosition: "object-center",
     imageSize: "small",
     description: [
@@ -26,6 +28,7 @@ const hobbies = [
   {
     title: "Gatavošana",
     image: "/images/relax-cook.jpg",
+    alt: "Izceptas maizītes tikko izņemtas no krāsns",
     imagePosition: "object-center",
     imageSize: "medium",
     description: [
@@ -36,6 +39,7 @@ const hobbies = [
   {
     title: "Draugu satikšana",
     image: "/images/relax-friends.jpeg",
+    alt: "Draugi smaida",
     imagePosition: "object-center",
     imageSize: "large",
     description: [
@@ -96,7 +100,7 @@ export function RelaxSection() {
                   >
                     <img
                       src={`${import.meta.env.BASE_URL}${hobby.image}`}
-                      alt={`${hobby.title} attēls`}
+                      alt={`${hobby.alt} attēls`}
                       className={`aspect-[4/3] w-full rounded-[14px] object-cover ${hobby.imagePosition}`}
                     />
                   </div>

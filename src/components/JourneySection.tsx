@@ -30,6 +30,7 @@ function WalkIcon() {
       stroke-linecap="round"
       stroke-linejoin="round"
       // class="lucide lucide-footprints-icon lucide-footprints"
+      aria-hidden="true"
     >
       <path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z" />
       <path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z" />
@@ -51,6 +52,7 @@ function TrainIcon() {
       stroke-linecap="round"
       stroke-linejoin="round"
       // class="lucide lucide-train-front-icon lucide-train-front"
+      aria-hidden="true"
     >
       <path d="M8 3.1V7a4 4 0 0 0 8 0V3.1" />
       <path d="m9 15-1-1" />
@@ -74,6 +76,7 @@ function CityIcon() {
       stroke-linecap="round"
       stroke-linejoin="round"
       // class="lucide lucide-building2-icon lucide-building-2"
+      aria-hidden="true"
     >
       <path d="M10 12h4" />
       <path d="M10 8h4" />
@@ -96,6 +99,7 @@ function UniIcon() {
       stroke-linecap="round"
       stroke-linejoin="round"
       // class="lucide lucide-university-icon lucide-university"
+      aria-hidden="true"
     >
       <path d="M14 21v-3a2 2 0 0 0-4 0v3" />
       <path d="M18 12h.01" />

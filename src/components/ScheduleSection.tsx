@@ -177,7 +177,10 @@ export function ScheduleSection() {
         <div className="mb-5 inline-flex flex-wrap items-center gap-5 rounded-full border border-white/30 bg-white/30 px-5 py-3 text-sm font-semibold text-[var(--color-muted)] backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.035)]">
           {legendItems.map((item) => (
             <div key={item.label} className="flex items-center gap-2">
-              <span className={`h-3 w-3 rounded-full ${item.className}`} />
+              <span
+                aria-hidden="true"
+                className={`h-3 w-3 rounded-full ${item.className}`}
+              />
               {item.label}
             </div>
           ))}
@@ -221,7 +224,7 @@ export function ScheduleSection() {
           <div className="overflow-x-auto rounded-[1.5rem] border border-white/30 bg-white/35 p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl">
             <div className="min-w-[980px]">
               <div className="grid grid-cols-[72px_repeat(7,1fr)]">
-                <div />
+                <div aria-hidden="true" />
                 {days.map((day) => (
                   <div
                     key={day}
