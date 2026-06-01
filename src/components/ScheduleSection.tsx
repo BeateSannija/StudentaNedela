@@ -168,7 +168,7 @@ export function ScheduleSection() {
             Mans nedēļas ritms
           </h2>
 
-         <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
+          <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
             Nedēļa nav tikai lekciju saraksts — tajā ir arī praktiskie darbi,
             privātstundas, valodas nodarbības un laiks kustībai.
           </p>
@@ -183,73 +183,114 @@ export function ScheduleSection() {
           ))}
         </div>
 
-        <div className="overflow-x-auto rounded-[1.5rem] border border-white/30 bg-white/35 p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl">
-          <div className="min-w-[980px]">
-            <div className="grid grid-cols-[72px_repeat(7,1fr)]">
-              <div />
-              {days.map((day) => (
-                <div
-                  key={day}
-                  className="border-b border-[var(--color-border)] px-3 py-3 text-center text-xs font-extrabold uppercase tracking-wide"
-                >
-                  {day}
-                </div>
-              ))}
-            </div>
+        <div className="space-y-8 md:hidden">
+          {days.map((day) => {
+            const dayEvents = events.filter((event) => event.day === day);
 
-            <div
-              className="relative grid grid-cols-[72px_repeat(7,1fr)]"
-              style={{ height: `${(endHour - startHour) * hourHeight + 18}px` }}
-            >
-              <div className="relative border-r border-[var(--color-border)]">
-                {Array.from({ length: endHour - startHour + 1 }, (_, index) => {
-                  const hour = startHour + index;
+            if (dayEvents.length === 0) {
+              return null;
+            }
 
-                  return (
-                    <div
-                      key={hour}
-                      className="absolute left-0 flex w-full -translate-y-1/2 justify-center text-xs font-semibold text-[var(--color-muted)]"
-                      style={{ top: `${index * hourHeight}px` }}
+            return (
+              <div
+                key={day}
+                className="rounded-3xl border border-white/30 bg-white/35 p-5 backdrop-blur-xl"
+              >
+                <h3 className="mb-4 text-lg font-extrabold uppercase">{day}</h3>
+
+                <div className="space-y-3">
+                  {dayEvents.map((event) => (
+                    <article
+                      key={`${event.day}-${event.title}`}
+                      className={`rounded-2xl p-4 ${getEventClass(event.category)}`}
                     >
-                      {hour}:00
-                    </div>
-                  );
-                })}
+                      <p className="text-sm font-semibold text-[var(--color-muted)]">
+                        {event.time}
+                      </p>
+
+                      <h4 className="mt-1 font-bold">{event.title}</h4>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="hidden md:block">
+          <div className="overflow-x-auto rounded-[1.5rem] border border-white/30 bg-white/35 p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl">
+            <div className="min-w-[980px]">
+              <div className="grid grid-cols-[72px_repeat(7,1fr)]">
+                <div />
+                {days.map((day) => (
+                  <div
+                    key={day}
+                    className="border-b border-[var(--color-border)] px-3 py-3 text-center text-xs font-extrabold uppercase tracking-wide"
+                  >
+                    {day}
+                  </div>
+                ))}
               </div>
 
-              {days.map((day) => (
-                <div
-                  key={day}
-                  className="relative border-r border-[var(--color-border)] last:border-r-0"
-                >
-                  {Array.from({ length: endHour - startHour }, (_, index) => (
-                    <div
-                      key={index}
-                      className="border-b border-[var(--color-border)]"
-                      style={{ height: `${hourHeight}px` }}
-                    />
-                  ))}
+              <div
+                className="relative grid grid-cols-[72px_repeat(7,1fr)]"
+                style={{
+                  height: `${(endHour - startHour) * hourHeight + 18}px`,
+                }}
+              >
+                <div className="relative border-r border-[var(--color-border)]">
+                  {Array.from(
+                    { length: endHour - startHour + 1 },
+                    (_, index) => {
+                      const hour = startHour + index;
 
-                  {events
-                    .filter((event) => event.day === day)
-                    .map((event) => (
-                      <article
-                        key={`${event.day}-${event.title}-${event.time}`}
-                        className={`absolute left-1.5 right-1.5 rounded-xl border border-white/40 p-2 text-xs shadow-[0_6px_16px_rgba(31,39,71,0.06)] ${getEventClass(
-                          event.category,
-                        )}`}
-                        style={getEventStyle(event.start, event.end)}
-                      >
-                        <h3 className="font-extrabold leading-tight">
-                          {event.title}
-                        </h3>
-                        <p className="mt-0.5 text-[0.68rem] font-semibold text-[var(--color-muted)]">
-                          {event.time}
-                        </p>
-                      </article>
-                    ))}
+                      return (
+                        <div
+                          key={hour}
+                          className="absolute left-0 flex w-full -translate-y-1/2 justify-center text-xs font-semibold text-[var(--color-muted)]"
+                          style={{ top: `${index * hourHeight}px` }}
+                        >
+                          {hour}:00
+                        </div>
+                      );
+                    },
+                  )}
                 </div>
-              ))}
+
+                {days.map((day) => (
+                  <div
+                    key={day}
+                    className="relative border-r border-[var(--color-border)] last:border-r-0"
+                  >
+                    {Array.from({ length: endHour - startHour }, (_, index) => (
+                      <div
+                        key={index}
+                        className="border-b border-[var(--color-border)]"
+                        style={{ height: `${hourHeight}px` }}
+                      />
+                    ))}
+
+                    {events
+                      .filter((event) => event.day === day)
+                      .map((event) => (
+                        <article
+                          key={`${event.day}-${event.title}-${event.time}`}
+                          className={`absolute left-1.5 right-1.5 rounded-xl border border-white/40 p-2 text-xs shadow-[0_6px_16px_rgba(31,39,71,0.06)] ${getEventClass(
+                            event.category,
+                          )}`}
+                          style={getEventStyle(event.start, event.end)}
+                        >
+                          <h3 className="font-extrabold leading-tight">
+                            {event.title}
+                          </h3>
+                          <p className="mt-0.5 text-[0.68rem] font-semibold text-[var(--color-muted)]">
+                            {event.time}
+                          </p>
+                        </article>
+                      ))}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

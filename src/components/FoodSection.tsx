@@ -25,7 +25,7 @@ export function FoodSection() {
     >
       <div className="container">
         <div className="grid gap-8 lg:grid-cols-[0.92fr_1fr] lg:items-center">
-          <div className="relative flex min-h-[420px] items-center justify-center overflow-visible">
+          <div className="relative hidden min-h-[420px] items-center justify-center overflow-visible lg:flex">
             <div className="food-hero-gradient pointer-events-none absolute -left-40 -top-32 h-[760px] w-[900px] blur-3xl" />
 
             <img

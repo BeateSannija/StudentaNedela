@@ -65,7 +65,7 @@ export function BackpackSection() {
             {bagItems.map((item) => (
               <article
                 key={item.number}
-                className="grid min-h-[120px] grid-cols-[42px_1fr] gap-3 border-b border-[var(--color-border)] py-4"
+                className="grid grid-cols-[42px_1fr] gap-3 border-b border-[var(--color-border)] py-5 md:min-h-[120px] md:py-4"
               >
                 <span className="grid h-7 w-7 place-items-center rounded-full border border-[var(--color-primary)] text-[0.65rem] font-extrabold text-[var(--color-primary)]">
                   {item.number}
