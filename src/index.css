@@ -20,7 +20,8 @@
   --font-display: "Playfair Display", serif;
 
   --max-width: 1200px;
-  --section-spacing: 6rem;
+  /* --section-spacing: 6rem; */
+  --section-spacing: 1rem;
   --content-spacing: 2rem;
 }
 
@@ -167,33 +168,33 @@ ol {
   );
 }
 
-.food-gradient {
-  mask-image: linear-gradient(to bottom, black 0%, black 82%, transparent 100%);
 
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    black 0%,
-    black 80%,
-    transparent 100%
-  );
-}
-
-.soundtrack-relax-region {
+.soundtrack-gradient {
   background:
-    radial-gradient(circle at 15% 35%, rgba(151,168,60,0.40) 0%, transparent 20%),
-    radial-gradient(circle at 65% 30%, rgba(171,195,226,0.70) 0%, transparent 18%),
-    radial-gradient(circle at 85% 25%, rgba(76,5,12,0.40) 0%, transparent 20%),
+    radial-gradient(circle at 80% 52%, rgba(151, 168, 60, 0.25) 0%, transparent 26%),
+    radial-gradient(circle at 18% 52%, rgba(151, 168, 60, 0.18) 0%, transparent 26%),
+    radial-gradient(circle at 48% 42%, rgba(151, 168, 60, 0.18) 0%, transparent 26%),
+    radial-gradient(circle at 52% 62%, rgba(171, 195, 226, 0.28) 0%, transparent 30%),
+    /* radial-gradient(circle at 28% 60%,rgba(76,5,12,0.20) 0%,transparent 26%), */
     var(--color-bg);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.food-hero-gradient {
+  background:
+    radial-gradient(
+      circle at 75% 48%,
+      rgba(171, 195, 226, 0.5) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 25% 48%,
+      rgba(151, 168, 60, 0.32) 0%,
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 40% 32%,
+      rgba(76, 5, 12, 0.24) 0%,
+      transparent 30%
+    );
 }
+

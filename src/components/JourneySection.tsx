@@ -112,19 +112,19 @@ const journeySteps = [
   {
     id: "home",
     title: "Mājas",
-    text: "Pirms došanās prom pārbaudu, vai viss nepieciešamais ir somā.",
+    text: "Paēdu brokastis un dodos ceļā.",
     icon: HouseIcon,
   },
   {
     id: "walk-to-station",
     title: "Pastaiga uz staciju",
-    text: "Dienas pirmās minūtes svaigā gaisā.",
+    text: "30 minūšu pastaiga līdz stacijai",
     icon: WalkIcon,
   },
   {
     id: "train",
     title: "Vilciens",
-    text: "45 minūtes mūzikai, podcastiem vai skatam pa logu.",
+    text: "45 minūtes mūzikai, mācībām vai sarunām ar kursabiedriem.",
     icon: TrainIcon,
   },
   {
@@ -135,8 +135,8 @@ const journeySteps = [
   },
   {
     id: "walk-to-university",
-    title: "Ceļš uz universitāti",
-    text: "Neliela pastaiga līdz studiju dienas sākumam.",
+    title: "Pastaiga uz universitāti",
+    text: "10 minūšu pastaiga līdz universitātei",
     icon: WalkIcon,
   },
   {
@@ -149,7 +149,7 @@ const journeySteps = [
 
 export function JourneySection() {
   return (
-    <section id="route" className="section section-divider">
+    <section id="route" className="section">
       <div className="container">
         <div className="mb-14 max-w-3xl">
           <div className="relative inline-block">
@@ -181,14 +181,14 @@ export function JourneySection() {
               return (
                 <article
                   key={step.id}
-                  className="relative grid gap-6 md:grid-cols-2 md:gap-16"
+                  className="relative grid gap-6 md:grid-cols-2 md:gap-0"
                 >
                   <span className="absolute left-[1.1rem] top-2 z-10 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-[var(--color-primary)] md:left-1/2" />
                   <div
                     className={`relative pl-14 md:pl-0 ${
                       isRight
-                        ? "md:col-start-2 md:text-left"
-                        : "md:col-start-1 md:text-right"
+                        ? "md:col-start-2 md:pl-16 md:text-left"
+                        : "md:col-start-1 md:pr-16 md:text-right"
                     }`}
                   >
                     <h3
@@ -203,7 +203,7 @@ export function JourneySection() {
                       {step.title}
                     </h3>
 
-                    <p className="mt-2 max-w-md text-base leading-7 text-[var(--color-muted)] md:ml-auto">
+                    <p className="mt-2 max-w-md text-base leading-7 text-[var(--color-muted)]">
                       {step.text}
                     </p>
                   </div>

@@ -1,6 +1,6 @@
 export function HeroSection() {
   return (
-    <section className="hero-gradient relative pb-40 pt-8">
+    <section className="hero-gradient relative pb-56 pt-8">
       <div className="container relative z-10">
         <div className="relative min-h-[620px] py-8 md:py-12">
           <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">

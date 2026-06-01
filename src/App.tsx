@@ -7,21 +7,30 @@ import { Footer } from "./components/Footer";
 import { FoodSection } from "./components/FoodSection";
 import { SoundtrackSection } from "./components/SoundtrackSection";
 import { NavbarSection } from "./components/Navbar";
+import SectionDivider from "./components/SectionDivider";
 
 function App() {
   return (
     <main>
       <NavbarSection />
       <HeroSection />
-      <BackpackSection />
-      <JourneySection />
-      <ScheduleSection />
-      <FoodSection />
 
-      <div className="soundtrack-relax-region">
-        <SoundtrackSection />
-        <RelaxSection />
-      </div>
+      <BackpackSection />
+      <SectionDivider />
+
+      <JourneySection />
+      <SectionDivider />
+
+      <ScheduleSection />
+      <SectionDivider />
+
+      <FoodSection />
+      <SectionDivider />
+
+      <SoundtrackSection />
+      <SectionDivider />
+      
+      <RelaxSection />
 
       <Footer />
     </main>

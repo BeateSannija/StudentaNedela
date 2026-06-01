@@ -103,7 +103,7 @@ const events = [
     time: "08:30–10:00",
     start: 8.5,
     end: 10,
-    category: "sports",
+    category: "studies",
   },
   {
     day: "Piektdiena",
@@ -111,7 +111,7 @@ const events = [
     time: "14:30–16:10",
     start: 14.5,
     end: 16.16,
-    category: "private",
+    category: "studies",
   },
   {
     day: "Svētdiena",
@@ -124,14 +124,14 @@ const events = [
 ];
 
 const legendItems = [
-  { label: "Studijas", className: "bg-[rgba(171,195,226,0.42)]" },
-  { label: "Sports", className: "bg-[rgba(151,168,60,0.34)]" },
-  { label: "Privātstundas", className: "bg-[rgba(76,5,12,0.14)]" },
+  { label: "Studijas", className: "bg-[#cad68f]" },
+  { label: "Sports", className: "bg-[#c3d6f0]" },
+  { label: "Privātstundas", className: "bg-[#dfc2c8]" },
 ];
 
 const startHour = 8;
 const endHour = 20;
-const hourHeight = 52;
+const hourHeight = 46;
 
 function getEventStyle(start: number, end: number) {
   return {
@@ -140,16 +140,16 @@ function getEventStyle(start: number, end: number) {
   };
 }
 
-function getEventClass(category: string) {
+function getEventClass(category?: string) {
   if (category === "sports") {
-    return "bg-[rgba(151,168,60,0.34)]";
+    return "bg-[#c3d6f0]";
   }
 
   if (category === "private") {
-    return "bg-[rgba(76,5,12,0.14)]";
+    return "bg-[#dfc2c8]";
   }
 
-  return "bg-[rgba(171,195,226,0.42)]";
+  return "bg-[#cad68f]";
 }
 
 export function ScheduleSection() {
@@ -157,9 +157,12 @@ export function ScheduleSection() {
     <section id="schedule" className="section">
       <div className="container">
         <div className="mb-10 max-w-3xl space-y-4">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-muted)]">
-            Grafiks
-          </p>
+          <div className="relative inline-block">
+            <span className="absolute -left-3 top-1/2 h-7 w-[calc(100%+1.5rem)] -translate-y-1/2 bg-[var(--color-green)]" />
+            <p className="relative text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">
+              Grafiks
+            </p>
+          </div>
 
           <h2 className="display-heading text-5xl font-bold leading-none text-[var(--color-primary)] md:text-7xl">
             Mans nedēļas ritms
@@ -171,19 +174,16 @@ export function ScheduleSection() {
           </p>
         </div>
 
-        <div className="mb-5 flex flex-wrap gap-3">
+        <div className="mb-5 inline-flex flex-wrap items-center gap-5 rounded-full border border-white/30 bg-white/30 px-5 py-3 text-sm font-semibold text-[var(--color-muted)] backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.035)]">
           {legendItems.map((item) => (
-            <div
-              key={item.label}
-              className="flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)]/70 px-4 py-2 text-sm font-semibold text-[var(--color-muted)]"
-            >
+            <div key={item.label} className="flex items-center gap-2">
               <span className={`h-3 w-3 rounded-full ${item.className}`} />
               {item.label}
             </div>
           ))}
         </div>
 
-        <div className="overflow-x-auto rounded-[1.5rem] border border-[var(--color-border)] bg-[var(--color-surface)]/70 p-4 shadow-sm">
+        <div className="overflow-x-auto rounded-[1.5rem] border border-white/30 bg-white/35 p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl">
           <div className="min-w-[980px]">
             <div className="grid grid-cols-[72px_repeat(7,1fr)]">
               <div />
@@ -236,7 +236,7 @@ export function ScheduleSection() {
                       <article
                         key={`${event.day}-${event.title}-${event.time}`}
                         className={`absolute left-1.5 right-1.5 rounded-xl border border-white/40 p-2 text-xs shadow-[0_6px_16px_rgba(31,39,71,0.06)] ${getEventClass(
-                          event.category
+                          event.category,
                         )}`}
                         style={getEventStyle(event.start, event.end)}
                       >

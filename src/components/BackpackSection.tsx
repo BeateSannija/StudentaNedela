@@ -31,7 +31,7 @@ const bagItems = [
 
 export function BackpackSection() {
   return (
-      <section id="backpack" className="section section-divider -mt-24">
+      <section id="backpack" className="section -mt-24">
       <div className="container">
         <div className="mb-14 max-w-3xl">
           <div className="relative inline-block">

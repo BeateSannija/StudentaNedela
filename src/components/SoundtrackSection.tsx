@@ -66,12 +66,15 @@ function MusicIcon() {
 
 export function SoundtrackSection() {
   return (
-    <section id="soundtrack" className="section">
+    <section id="soundtrack" className="soundtrack-gradient section">
       <div className="container">
         <div className="mb-6 max-w-2xl">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-muted)]">
-            Mūzika
-          </p>
+          <div className="relative inline-block">
+            <span className="absolute -left-2 top-1/2 h-7 w-[calc(100%+1rem)] -translate-y-1/2 -rotate-1 bg-[var(--color-green)]" />
+            <p className="relative text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">
+              Mūzika
+            </p>
+          </div>
 
           <h2 className="display-heading text-4xl font-bold leading-[1.2] text-[var(--color-primary)] md:text-6xl">
             Nedēļas ritmā
@@ -88,7 +91,7 @@ export function SoundtrackSection() {
             <article
               key={playlist.title}
               // className="group grid gap-4 rounded-[16px] border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-4 shadow-[0_8px_24px_rgba(31,39,71,0.04)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(31,39,71,0.07)] sm:grid-cols-[145px_1fr]"
-            className="group grid gap-4 rounded-[18px] border border-white/30 bg-white/35 p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:bg-white/45 hover:shadow-[0_10px_30px_rgba(0,0,0,0.06)] sm:grid-cols-[145px_1fr]"
+              className="group grid gap-4 rounded-[18px] border border-white/30 bg-white/35 p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:bg-white/45 hover:shadow-[0_10px_30px_rgba(0,0,0,0.06)] sm:grid-cols-[145px_1fr]"
             >
               <div className="aspect-square overflow-hidden rounded-[14px]">
                 <img
