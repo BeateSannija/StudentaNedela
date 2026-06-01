@@ -171,9 +171,9 @@ export function JourneySection() {
         </div>
 
         <div className="relative mx-auto max-w-5xl">
-          <div className="absolute bottom-6 left-[1.1rem] top-0 w-px bg-[var(--color-border)] md:left-1/2" />
+          <div className="absolute bottom-6 left-[1.1rem] top-0 w-[3px] rounded-full bg-gradient-to-b from-[var(--color-blue)] via-[var(--color-primary)] to-[var(--color-green)] md:left-1/2" />
 
-          <div className="space-y-8 md:space-y-5">
+          <div className="space-y-6 md:space-y-4">
             {journeySteps.map((step, index) => {
               const isRight = index % 2 === 1;
               const Icon = step.icon;
@@ -183,12 +183,19 @@ export function JourneySection() {
                   key={step.id}
                   className="relative grid gap-6 md:grid-cols-2 md:gap-0"
                 >
-                  <span className="absolute left-[1.1rem] top-2 z-10 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-[var(--color-primary)] md:left-1/2" />
+                  <span className="absolute left-[1.1rem] top-3 z-10 h-5 w-5 -translate-x-1/2 rounded-full border-[5px] border-[var(--color-bg)] bg-[var(--color-primary)] shadow-[0_0_0_3px_#97A83C] md:left-1/2" />
+
+                  <span
+                    className={`absolute top-[1.35rem] hidden h-px w-12 bg-[var(--color-border)] md:block ${
+                      isRight ? "left-1/2 ml-4" : "right-1/2 mr-4"
+                    }`}
+                  />
+
                   <div
                     className={`relative pl-14 md:pl-0 ${
                       isRight
-                        ? "md:col-start-2 md:pl-16 md:text-left"
-                        : "md:col-start-1 md:pr-16 md:text-right"
+                        ? "md:col-start-2 md:pl-20 md:text-left"
+                        : "md:col-start-1 md:pr-20 md:text-right"
                     }`}
                   >
                     <h3
@@ -196,7 +203,7 @@ export function JourneySection() {
                         !isRight ? "md:justify-end" : ""
                       }`}
                     >
-                      <span className="text-[var(--color-primary)]">
+                      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-surface)] text-[var(--color-primary)] shadow-sm ring-1 ring-[var(--color-border)]">
                         <Icon />
                       </span>
 

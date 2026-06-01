@@ -31,6 +31,7 @@ function App() {
       <SectionDivider />
       
       <RelaxSection />
+      <SectionDivider />
 
       <Footer />
     </main>

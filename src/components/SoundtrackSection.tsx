@@ -116,7 +116,7 @@ export function SoundtrackSection() {
                   </p>
                 </div>
 
-                <div className="mt-3 space-y-0 border-t border-[var(--color-border)] pt-0 transition-colors duration-300 group-hover:border-[var(--color-primary)]/35">
+                <div className="mt-3 border-t border-[var(--color-border)] pt-0">
                   {playlist.songs.map((song, index) => (
                     <div
                       key={`${playlist.title}-${index}`}
