@@ -30,7 +30,8 @@
   --color-surface: #22252c;
   --color-text: #f4f1eb;
   --color-muted: #b5bbc8;
-  --color-primary: #7a2a24;
+  /* --color-primary: #7a2a24; */
+  --color-primary: #8a3530;
   --color-blue: #8fa9c9;
   --color-green: #8a9f46;
   --color-border: #3a3f48;
