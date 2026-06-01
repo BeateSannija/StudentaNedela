@@ -76,11 +76,11 @@ export function SoundtrackSection() {
             </p>
           </div>
 
-          <h2 className="display-heading text-4xl font-bold leading-[1.2] text-[var(--color-primary)] md:text-6xl">
+          <h2 className="display-heading text-4xl font-bold leading-[1.3] text-[var(--color-primary)] md:text-6xl">
             Nedēļas ritmā
           </h2>
 
-          <p className="mt-8 max-w-2xl text-base leading-7 text-[var(--color-muted)]">
+           <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
             Mūzika kā fons dažādiem nedēļas brīžiem — ceļam, fokusam, skrējienam
             un vakaram.
           </p>

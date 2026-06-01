@@ -31,9 +31,9 @@ const bagItems = [
 
 export function BackpackSection() {
   return (
-      <section id="backpack" className="section -mt-24">
+    <section id="backpack" className="section -mt-24">
       <div className="container">
-        <div className="mb-14 max-w-3xl">
+        <div className="mb-6 max-w-3xl">
           <div className="relative inline-block">
             <div className="absolute -left-4 top-0 h-7 w-36 rotate-1 bg-[var(--color-green)]" />
 
@@ -42,11 +42,11 @@ export function BackpackSection() {
             </p>
           </div>
 
-          <h2 className="mt-5 display-heading text-4xl font-bold leading-[1.02] text-[var(--color-primary)] md:text-6xl">
+          <h2 className="display-heading text-4xl font-bold leading-[1.3] text-[var(--color-primary)] md:text-6xl">
             Kas ir manā mugursomā?
           </h2>
 
-          <p className="mt-5 max-w-2xl text-base leading-7 text-[var(--color-muted)]">
+          <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
             Lietas, kas gandrīz vienmēr ceļo līdzi — studijām, ceļam un mazām
             pauzēm starp lekcijām.
           </p>

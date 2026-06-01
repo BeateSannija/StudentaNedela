@@ -26,7 +26,6 @@ export function FoodSection() {
       <div className="container">
         <div className="grid gap-8 lg:grid-cols-[0.92fr_1fr] lg:items-center">
           <div className="relative flex min-h-[420px] items-center justify-center overflow-visible">
-            {/* <div className="pointer-events-none absolute -left-40 -top-32 h-[760px] w-[900px] bg-[radial-gradient(circle_at_75%_65%,rgba(171,195,226,0.9)_0%,transparent_40%),radial-gradient(circle_at_25%_68%,rgba(151,168,60,0.42)_0%,transparent_34%),radial-gradient(circle_at_40%_32%,rgba(76,5,12,0.34)_0%,transparent_30%)] blur-3xl" /> */}
             <div className="food-hero-gradient pointer-events-none absolute -left-40 -top-32 h-[760px] w-[900px] blur-3xl" />
 
             <img
@@ -45,12 +44,12 @@ export function FoodSection() {
             <div className="relative mt-3 mb-2">
               <div className="absolute bottom-[0.42em] left-[2.2em] h-3 w-[4.6em] -rotate-1 bg-[var(--color-green)] opacity-75" />
 
-              <h2 className="relative display-heading text-4xl font-bold leading-[0.95] text-[var(--color-primary)] md:text-6xl">
+              <h2 className="relative display-heading text-4xl font-bold leading-[1.1] text-[var(--color-primary)] md:text-6xl">
                 Mani mīļākie našķi
               </h2>
             </div>
 
-            <p className="mt-4 max-w-lg text-base leading-7 text-[var(--color-muted)] indent-8">
+            <p className="mt-4 max-w-lg text-base leading-[1.6] text-[var(--color-muted)] indent-8">
               Našķi starp lekcijām un pauzēs starp mācību sesijām ir svarīga
               studenta dzīves daļa. Es piekopju augu valsts uzturu, kas nozīmē,
               ka man ir vairāk jāpiedomā pie atļautajiem našķiem. Šie ir mani

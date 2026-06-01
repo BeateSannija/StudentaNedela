@@ -17,18 +17,17 @@ export function HeroSection() {
                 nedēļa
               </h1>
 
-              <div className="mt-8 max-w-2xl space-y-5">
-                <h2 className="editorial-heading text-2xl md:text-4xl">
+              <div className="mt-8 max-w-2xl">
+                <h2 className="mt-8 text-2xl font-semibold text-[var(--color-text)] md:text-3xl">
                   Datorikas nodaļas studenta dzīvē
                 </h2>
 
-              {/* TODO: mazāku atstarpi */}
-                <p className="text-lg leading-8 text-[var(--color-muted)] indent-6">
+                <p className="mt-8 text-lg leading-[1.6] text-[var(--color-muted)]">
                   Personisks ieskats studiju nedēļā — no digitālās darba vides
                   un ceļa uz universitāti līdz maltītēm, mūzikai un atpūtai.
                 </p>
 
-                <div className="flex flex-wrap gap-3 pt-2">
+                <div className="mt-6 flex flex-wrap gap-3">
                   <a
                     href="#schedule"
                     className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface)]/55 px-6 py-3 font-bold shadow-[0_10px_30px_rgba(31,39,71,0.08)] backdrop-blur-xl transition duration-200 hover:-translate-y-0.5 hover:text-[var(--color-primary)]"

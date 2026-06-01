@@ -49,7 +49,7 @@ export function RelaxSection() {
   return (
     <section id="relax" className="section">
       <div className="container">
-        <div className="mb-14 max-w-3xl">
+        <div className="mb-6 max-w-3xl">
           <div className="relative inline-block">
             <div className="absolute -left-4 top-0 h-7 w-44 -rotate-1 bg-[var(--color-green)]" />
 
@@ -58,11 +58,11 @@ export function RelaxSection() {
             </p>
           </div>
 
-          <h2 className="mt-5 display-heading text-4xl font-bold leading-[1.02] text-[var(--color-primary)] md:text-6xl">
+          <h2 className="display-heading text-4xl font-bold leading-[1.3] text-[var(--color-primary)] md:text-6xl">
             Atpūta no studijām
           </h2>
 
-          <p className="mt-5 max-w-2xl text-base leading-7 text-[var(--color-muted)]">
+          <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
             Brīži ārpus lekcijām, kas palīdz atgūt enerģiju un saglabāt
             līdzsvaru darba nedēļas laikā.
           </p>

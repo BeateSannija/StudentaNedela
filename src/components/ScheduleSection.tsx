@@ -156,7 +156,7 @@ export function ScheduleSection() {
   return (
     <section id="schedule" className="section">
       <div className="container">
-        <div className="mb-10 max-w-3xl space-y-4">
+        <div className="mb-6 max-w-3xl space-y-4">
           <div className="relative inline-block">
             <span className="absolute -left-3 top-1/2 h-7 w-[calc(100%+1.5rem)] -translate-y-1/2 bg-[var(--color-green)]" />
             <p className="relative text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">
@@ -164,11 +164,11 @@ export function ScheduleSection() {
             </p>
           </div>
 
-          <h2 className="display-heading text-5xl font-bold leading-none text-[var(--color-primary)] md:text-7xl">
+          <h2 className="display-heading text-4xl font-bold leading-[1.30] text-[var(--color-primary)] md:text-6xl">
             Mans nedēļas ritms
           </h2>
 
-          <p className="text-lg leading-8 text-[var(--color-muted)]">
+         <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
             Nedēļa nav tikai lekciju saraksts — tajā ir arī praktiskie darbi,
             privātstundas, valodas nodarbības un laiks kustībai.
           </p>
