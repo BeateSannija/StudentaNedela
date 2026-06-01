@@ -29,7 +29,7 @@ export function FoodSection() {
             <div className="food-hero-gradient pointer-events-none absolute -left-40 -top-32 h-[760px] w-[900px] blur-3xl" />
 
             <img
-              src="/images/cupcake-black.png"
+              src={`${import.meta.env.BASE_URL}images/cupcake-black.png`}
               alt="Melnbalta kēksiņa ilustrācija"
               className="relative z-10 mx-auto h-auto max-h-[280px] w-auto object-contain opacity-95"
             />
@@ -60,7 +60,6 @@ export function FoodSection() {
               {snacks.map((snack, index) => (
                 <article
                   key={snack.name}
-                  // className="group grid gap-4 border-b border-[var(--color-border)] py-6 sm:grid-cols-[64px_1fr]"
                   className="group grid gap-3 border-b border-[var(--color-border)] py-4 sm:grid-cols-[54px_1fr]"
                 >
                   <span className="text-sm font-bold tracking-[0.25em] text-[var(--color-primary)]">

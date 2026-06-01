@@ -95,7 +95,7 @@ export function RelaxSection() {
                     className={`overflow-hidden rounded-[18px] border border-[var(--color-border)] bg-[var(--color-surface)] p-3 shadow-[0_10px_28px_rgba(31,39,71,0.05)] ${imageWidthClass} ${imageAlignClass}`}
                   >
                     <img
-                      src={hobby.image}
+                      src={`${import.meta.env.BASE_URL}${hobby.image}`}
                       alt={`${hobby.title} attēls`}
                       className={`aspect-[4/3] w-full rounded-[14px] object-cover ${hobby.imagePosition}`}
                     />

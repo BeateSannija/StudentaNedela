@@ -90,12 +90,11 @@ export function SoundtrackSection() {
           {playlists.map((playlist) => (
             <article
               key={playlist.title}
-              // className="group grid gap-4 rounded-[16px] border border-[var(--color-border)] bg-[var(--color-surface)]/80 p-4 shadow-[0_8px_24px_rgba(31,39,71,0.04)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(31,39,71,0.07)] sm:grid-cols-[145px_1fr]"
               className="group grid gap-4 rounded-[18px] border border-white/30 bg-white/35 p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:bg-white/45 hover:shadow-[0_10px_30px_rgba(0,0,0,0.06)] sm:grid-cols-[145px_1fr]"
             >
               <div className="aspect-square overflow-hidden rounded-[14px]">
                 <img
-                  src={playlist.image}
+                  src={`${import.meta.env.BASE_URL}${playlist.image}`}
                   alt={`${playlist.title} atskaņošanas saraksta noskaņas attēls`}
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />

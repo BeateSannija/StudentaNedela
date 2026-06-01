@@ -55,7 +55,7 @@ export function BackpackSection() {
         <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <div className="border border-[var(--color-border)] bg-[var(--color-surface)] p-3 shadow-[0_12px_34px_rgba(31,39,71,0.05)]">
             <img
-              src="/images/backpack.jpg"
+              src={`${import.meta.env.BASE_URL}images/backpack.jpg`}
               alt="Flatlay attēls ar ikdienā līdzi esošām lietām"
               className="w-full object-cover"
             />

@@ -51,7 +51,7 @@ export function HeroSection() {
 
             <div className="relative hidden items-center justify-center lg:flex">
               <img
-                src="/images/coding-black.png"
+                src={`${import.meta.env.BASE_URL}images/coding-black.png`}
                 alt="Studenta ilustrācija"
                 className="h-auto w-[430px] object-contain opacity-95"
               />
