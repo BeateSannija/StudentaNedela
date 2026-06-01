@@ -22,7 +22,7 @@ export function HeroSection() {
 
               <div className="my-8 flex justify-center lg:hidden">
                 <img
-                  src="/images/coding-black.png"
+                  src={`${import.meta.env.BASE_URL}images/coding-black.png`}
                   alt="Studenta ilustrācija"
                   className="w-52 opacity-80"
                 />
