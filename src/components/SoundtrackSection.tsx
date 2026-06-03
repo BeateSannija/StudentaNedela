@@ -13,7 +13,8 @@ const playlists = [
   {
     title: "Motivācijai",
     label: "Atskaņošanas saraksts 02",
-    mood: "Mācības jāmīl :)",
+    // mood: "Mācības jāmīl :)",
+    mood: "Lai vieglāk pieķertos darbiem.",
     image: "/images/soundtrack-motivation.jpg",
     songs: [
       { title: "Eye of the Tiger", artist: "Survivor" },
@@ -33,7 +34,7 @@ const playlists = [
     ],
   },
   {
-    title: "Brīvs",
+    title: "Atelpai",
     label: "Atskaņošanas saraksts 04",
     mood: "Miers pēc garas dienas.",
     image: "/images/soundtrack-rest.jpeg",
@@ -80,9 +81,10 @@ export function SoundtrackSection() {
             Nedēļas ritmā
           </h2>
 
-           <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
-            Mūzika kā fons dažādiem nedēļas brīžiem — ceļam, fokusam, skrējienam
-            un vakaram.
+          <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
+            Mūzika ir viens no svarīgākajiem manas ikdienas elementiem. To
+            klausos, esot ceļā, mācoties, skrienot un atpūšoties — gatavojot
+            ēst, lasot vai pievēršoties citām radošām nodarbēm.
           </p>
         </div>
 

@@ -8,9 +8,9 @@ const hobbies = [
     description: [
       "Skriešana ir ne tikai veids kā es sev uzturu labā fiziskā sagatavotības formā, " +
         "bet arī veids kā es izvēdinu galvu. Parasti skrienu pa pilsētu.",
-      "Lai neskrietu bez mērķa un motivētu sevi uzlabot savus rezultātus, es gatavojos pusmaratonam. " +
-        "Pašlaik mani treniņi notiek otrdienās pirms algoritmu teorijas lekcijas, tad ir intervālu skrējieni; ceturtdienās skrienu vieglo skrējienu no paša rīta pirms es sāku pildīt mājasdarbus, " +
-        "un visbeidzot svētdienas ir dienas, kad es skrienu garās distances jeb katru nedēļu pietuvojos aizvien tuvāk 21 kilometru robežai.",
+      "Lai neskrietu bez mērķa un motivētu sevi uzlabot rezultātus, gatavojos pusmaratonam. " +
+        "Otrdienās pirms algoritmu teorijas lekcijām parasti skrienu intervālus, " +
+        "ceturtdienās izvēlos vieglu skrējienu, bet svētdienās veicu garākās distances, pakāpeniski pietuvojoties 21 kilometra robežai."
     ],
   },
   {
@@ -32,7 +32,7 @@ const hobbies = [
     imagePosition: "object-center",
     imageSize: "medium",
     description: [
-      "Tā kā piekopju augu valsts uzturu man nākas daudz gatavot. " +
+      "Tā kā piekopju augu valsts uzturu, daudz laika pavadu virtuvē, izmēģinot jaunas receptes un idejas. " +
         "Tāpat man patīk apmeklēt jaunas vietas, kur var garšīgi paēst un pasūtīt ko tādu, ko vēlāk varētu mēģināt atdarināt un ieviest savā ēdienkartē.",
     ],
   },
@@ -44,7 +44,7 @@ const hobbies = [
     imageSize: "large",
     description: [
       "Nedēļa nebūtu pilnīga bez laika, ko pavadu kopā ar draugiem. " +
-        "Lai gan satiekamies universitātē, kur kopā pavadām daudz laika, cenšamies satikties arī pēc iespējas biežāk ārpus studijām.",
+        "Lai gan universitātē tiekamies gandrīz katru dienu, cenšamies atrast laiku arī kopīgām pastaigām, pasākumiem vai vienkārši sarunām ārpus studijām.",
     ],
   },
 ];

@@ -1,19 +1,19 @@
 const snacks = [
   {
-    name: "Dateles + zemesriekstu sviests",
-    note: "Īsam enerģijas boostam.",
+    name: "Dateles ar zemesriekstu sviestu",
+    note: 'Kad vēlos batoniņu "Snicker".',
   },
   {
     name: "Banānu pankūkas",
-    note: "10 minūtēs ir gatavs",
+    note: "Prasa mazliet vairāk gatavošanu.",
   },
   {
-    name: "Avokado maizīte",
-    note: "Kad vajag ko sātīgāku.",
+    name: "Mango sorberts",
+    note: "Atsvaidzinošs našķis siltākām dienām.",
   },
   {
-    name: "Tumšā šokolāde",
-    note: "Jo būsim godīgi.",
+    name: "Riekstu maisījums",
+    note: "Parasti iekļauj indijas riekstus, vālriekstus un žāvētas aprikozes.",
   },
 ];
 
@@ -39,10 +39,10 @@ export function FoodSection({ isDark }: FoodSectionProps) {
             />
           </div>
           <div className="relative">
-            <div className="absolute -left-5 top-0 h-7 w-44 -rotate-2 bg-[var(--color-green)]" />
+            <div className="absolute -left-5 -top-1 h-7 w-44 -rotate-2 bg-[var(--color-green)]" />
 
             <p className="relative text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">
-              Enerģija
+              Našķi
             </p>
 
             <div className="relative mt-3 mb-2">
@@ -53,9 +53,9 @@ export function FoodSection({ isDark }: FoodSectionProps) {
 
             <p className="mt-4 max-w-lg text-base leading-[1.6] text-[var(--color-muted)] indent-8">
               Našķi starp lekcijām un pauzēs starp mācību sesijām ir svarīga
-              studenta dzīves daļa. Es piekopju augu valsts uzturu, kas nozīmē,
-              ka man ir vairāk jāpiedomā pie atļautajiem našķiem. Šie ir mani
-              mīļākie augu valsts našķi.
+              studenta dzīves daļa. Es piekopju augu valsts uzturu, tāpēc ne
+              vienmēr varu izvēlēties pirmo našķi, kas pagadās pa rokai. Šie ir
+              mani mīļākie augu valsts našķi.
             </p>
 
             <div className="mt-5 border-t border-[var(--color-border)]">

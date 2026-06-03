@@ -16,8 +16,10 @@ export function HeroSection({ isDark }: HeroSectionProps) {
         <div className="flex min-h-screen flex-col py-8 md:items-center md:py-12">
           <div className="grid w-full items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="relative z-10 max-w-4xl pt-10 text-center md:pt-0 lg:text-left">
+
+              {/* LATVIJAS UNIVERSITĀTE / EZTF / DATORZINĀTNES */}
               <p className="mb-8 text-xs font-bold uppercase tracking-[0.28em] text-[var(--color-muted)] sm:text-sm md:mb-8">
-                LU / Datorikas nodaļa / darba nedēļa
+                LU / Eksakto zinātņu un tehnoloģiju fakultāte / Datorzinātnes
               </p>
 
               <div className="pt-6 md:pt-0">
@@ -40,12 +42,11 @@ export function HeroSection({ isDark }: HeroSectionProps) {
 
               <div className="mt-6 max-w-2xl mx-auto md:mt-8 lg:mx-0">
                 <h2 className="text-2xl font-semibold text-[var(--color-text)] md:text-3xl">
-                  Datorikas nodaļas studenta dzīvē
+                  Datorzinātņu studenta dzīvē
                 </h2>
 
                 <p className="mt-3 text-lg leading-[1.6] text-[var(--color-muted)] md:mt-5">
-                  Personisks ieskats studiju nedēļā — no digitālās darba vides
-                  un ceļa uz universitāti līdz maltītēm, mūzikai un atpūtai.
+                  Ikdienas aktivitātēs, paradumos un brīžos, kas raksturo manu studenta dzīvi.
                 </p>
 
                 <div className="mt-7 flex justify-center gap-3 lg:justify-start">

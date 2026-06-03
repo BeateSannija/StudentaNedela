@@ -2,29 +2,29 @@ const bagItems = [
   {
     number: "01",
     title: "Dators",
-    description: "Lenovo Yoga un studiju darbi.",
+    description: "Galvenais rīks lekciju pierakstiem, mājasdarbiem un kursu darbiem.",
   },
   {
     number: "02",
     title: "Ūdens pudele",
-    description: "Vienmēr līdzi lekcijās.",
+    description: "Lai neaizmirstu padzerties garajās studiju dienās.",
   },
   {
     number: "03",
     title: "Austiņas",
-    description: "Fokusam, mūzikai un ceļam.",
+    description: "Mūzikai, fokusam un trokšņu filtrēšanai, kā arī.",
   },
-  { number: "04", title: "Našķis", description: "Enerģijai starp lekcijām." },
+  { number: "04", title: "Našķis", description: "Ātrai enerģijai starp lekcijām un darbiem." },
   {
     number: "05",
     title: "Roku krēms",
-    description: "Ikdienas nepieciešamība.",
+    description: "Īpaši noderīgs augstajos gada mēnešos.",
   },
-  { number: "06", title: "Lūpu balzāms", description: "Vienmēr somā." },
+  { number: "06", title: "Lūpu balzāms", description: "Viena no tām lietām, kas somā ir vienmēr." },
   {
     number: "07",
     title: "Dezinfekcijas līdzeklis",
-    description: "Ātrai roku dezinfekcijai.",
+    description: "Blakus našķim — tīrām rokām pirms ēšanas.",
   },
   { number: "08", title: "Atslēgas", description: "Lai tiktu mājās." },
 ];
@@ -43,7 +43,7 @@ export function BackpackSection() {
           </div>
 
           <h2 className="display-heading text-4xl font-bold leading-[1.3] text-[var(--color-primary)] md:text-6xl">
-            Kas ir manā mugursomā?
+            Mana mugursoma
           </h2>
 
           <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">

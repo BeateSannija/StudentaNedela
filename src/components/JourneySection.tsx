@@ -122,31 +122,31 @@ const journeySteps = [
   {
     id: "walk-to-station",
     title: "Pastaiga uz staciju",
-    text: "30 minūšu pastaiga līdz stacijai",
+    text: "30 minūšu pastaiga līdz stacijai.",
     icon: WalkIcon,
   },
   {
     id: "train",
     title: "Vilciens",
-    text: "45 minūtes mūzikai, mācībām vai sarunām ar kursabiedriem.",
+    text: "45 minūtes mūzikai, mācībām vai sarunām ar draugiem.",
     icon: TrainIcon,
   },
   {
     id: "riga-station",
     title: "Rīgas stacija",
-    text: "Pārejas punkts starp mierīgo rītu un pilsētas tempu.",
+    text: "Izkāpšanas punkts, lai dotos uz universitāti.",
     icon: CityIcon,
   },
   {
     id: "walk-to-university",
     title: "Pastaiga uz universitāti",
-    text: "10 minūšu pastaiga līdz universitātei",
+    text: "10 minūšu pastaiga līdz universitātei.",
     icon: WalkIcon,
   },
   {
     id: "university",
     title: "Universitāte",
-    text: "Lekcijas, laboratorijas darbi un studiju dzīve.",
+    text: "Galamērķis sasniegts.",
     icon: UniIcon,
   },
 ];

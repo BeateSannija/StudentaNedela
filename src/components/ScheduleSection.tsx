@@ -11,7 +11,7 @@ const days = [
 const events = [
   {
     day: "Pirmdiena",
-    title: "ORACLE praktiskie",
+    title: "ORACLE projektēšanas rīki",
     time: "10:30–12:10",
     start: 10.5,
     end: 12.16,
@@ -19,10 +19,10 @@ const events = [
   },
   {
     day: "Otrdiena",
-    title: "Skriešana",
-    time: "09:00–10:00",
+    title: "Skriešana (intervālu treniņš)",
+    time: "09:00–10:30",
     start: 9,
-    end: 10,
+    end: 10.3,
     category: "sports",
   },
   {
@@ -59,7 +59,7 @@ const events = [
   },
   {
     day: "Trešdiena",
-    title: "Datoru grafika",
+    title: "Datoru grafikas un attēlu apstrādes pamati",
     time: "14:30–16:10",
     start: 14.5,
     end: 16.16,
@@ -75,10 +75,10 @@ const events = [
   },
   {
     day: "Ceturtdiena",
-    title: "Skriešana",
-    time: "09:00–10:00",
+    title: "Skriešana (vieglais skrējiens)",
+    time: "09:00–10:30",
     start: 9,
-    end: 10,
+    end: 10.3,
     category: "sports",
   },
   {
@@ -91,7 +91,7 @@ const events = [
   },
   {
     day: "Ceturtdiena",
-    title: "OOP",
+    title: "Objektorientētā programmēšana",
     time: "16:30–19:50",
     start: 16.5,
     end: 19.83,
@@ -115,19 +115,13 @@ const events = [
   },
   {
     day: "Svētdiena",
-    title: "Skriešana",
+    title: "Skriešana (garā distance)",
     time: "09:00–11:00",
     start: 9,
     end: 11,
     category: "sports",
   },
 ];
-
-// const legendItems = [
-//   { label: "Studijas", className: "bg-[#cad68f]" },
-//   { label: "Sports", className: "bg-[#c3d6f0]" },
-//   { label: "Privātstundas", className: "bg-[#dfc2c8]" },
-// ];
 
 const legendItems = [
   {
@@ -184,8 +178,10 @@ export function ScheduleSection() {
           </h2>
 
           <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
-            Nedēļa nav tikai lekciju saraksts — tajā ir arī praktiskie darbi,
-            privātstundas, valodas nodarbības un laiks kustībai.
+            Lai gan grafikā redzamas lekcijas, privātstundas un skriešana, liela
+            daļa nedēļas paiet arī ārpus šiem blokiem. Brīvajos brīžos pildu
+            mājasdarbus, strādāju pie kursa projektiem, lasu grāmatas vai
+            gatavoju ēst nākamajām dienām.
           </p>
         </div>
 
