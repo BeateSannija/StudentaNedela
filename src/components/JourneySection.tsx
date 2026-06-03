@@ -168,7 +168,7 @@ export function JourneySection() {
             No mājām līdz universitātei
           </h2>
 
-          <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
+          <p className="mt-8 max-w-3xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
             Ikdienas maršruts, kas savieno mierīgu rītu, vilciena ritmu un
             studiju dienas sākumu pilsētā.
           </p>

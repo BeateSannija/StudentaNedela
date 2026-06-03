@@ -12,13 +12,13 @@ const bagItems = [
   {
     number: "03",
     title: "Austiņas",
-    description: "Mūzikai, fokusam un trokšņu filtrēšanai, kā arī.",
+    description: "Mūzikai, fokusam un trokšņu filtrēšanai.",
   },
   { number: "04", title: "Našķis", description: "Ātrai enerģijai starp lekcijām un darbiem." },
   {
     number: "05",
     title: "Roku krēms",
-    description: "Īpaši noderīgs augstajos gada mēnešos.",
+    description: "Īpaši noderīgs aukstajos gada mēnešos.",
   },
   { number: "06", title: "Lūpu balzāms", description: "Viena no tām lietām, kas somā ir vienmēr." },
   {
@@ -46,7 +46,7 @@ export function BackpackSection() {
             Mana mugursoma
           </h2>
 
-          <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
+          <p className="mt-8 max-w-3xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
             Lietas, kas gandrīz vienmēr ceļo līdzi — studijām, ceļam un mazām
             pauzēm starp lekcijām.
           </p>

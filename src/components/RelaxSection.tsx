@@ -6,8 +6,8 @@ const hobbies = [
     imagePosition: "object-[center_73%]",
     imageSize: "large",
     description: [
-      "Skriešana ir ne tikai veids kā es sev uzturu labā fiziskā sagatavotības formā, " +
-        "bet arī veids kā es izvēdinu galvu. Parasti skrienu pa pilsētu.",
+      "Skriešana ir nodarbe, ar kuru es ne tikai uzturu sevi labā fiziskā formā, " +
+        "bet arī veids, kā es izvēdinu galvu. Parasti skrienu pa pilsētu.",
       "Lai neskrietu bez mērķa un motivētu sevi uzlabot rezultātus, gatavojos pusmaratonam. " +
         "Otrdienās pirms algoritmu teorijas lekcijām parasti skrienu intervālus, " +
         "ceturtdienās izvēlos vieglu skrējienu, bet svētdienās veicu garākās distances, pakāpeniski pietuvojoties 21 kilometra robežai."
@@ -20,7 +20,7 @@ const hobbies = [
     imagePosition: "object-center",
     imageSize: "small",
     description: [
-      "Lasīšana ir veids kā es patiešām atpūšos. " +
+      "Lasīšana ir veids, kā es patiešām atpūšos. " +
         "Tas ir laiks sev, kad varu pilnībā iegrimt citā pasaulē un uz brīdi aizmirst par termiņiem un studiju darbiem. " +
         "Visbiežāk izvēlos fantāziju vai zinātnisko fantastiku.",
     ],
@@ -32,7 +32,7 @@ const hobbies = [
     imagePosition: "object-center",
     imageSize: "medium",
     description: [
-      "Tā kā piekopju augu valsts uzturu, daudz laika pavadu virtuvē, izmēģinot jaunas receptes un idejas. " +
+      "Tā kā uzturā lietoju tikai augu valsts produktus, daudz laika pavadu virtuvē, izmēģinot jaunas receptes un idejas. " +
         "Tāpat man patīk apmeklēt jaunas vietas, kur var garšīgi paēst un pasūtīt ko tādu, ko vēlāk varētu mēģināt atdarināt un ieviest savā ēdienkartē.",
     ],
   },
@@ -66,7 +66,7 @@ export function RelaxSection() {
             Atpūta no studijām
           </h2>
 
-          <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
+          <p className="mt-8 max-w-3xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
             Brīži ārpus lekcijām, kas palīdz atgūt enerģiju un saglabāt
             līdzsvaru darba nedēļas laikā.
           </p>

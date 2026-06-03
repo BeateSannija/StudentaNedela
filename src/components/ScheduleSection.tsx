@@ -174,10 +174,10 @@ export function ScheduleSection() {
           </div>
 
           <h2 className="display-heading text-4xl font-bold leading-[1.30] text-[var(--color-primary)] md:text-6xl">
-            Mans nedēļas ritms
+            Mans nedēļas režīms
           </h2>
 
-          <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
+          <p className="mt-8 max-w-3xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
             Lai gan grafikā redzamas lekcijas, privātstundas un skriešana, liela
             daļa nedēļas paiet arī ārpus šiem blokiem. Brīvajos brīžos pildu
             mājasdarbus, strādāju pie kursa projektiem, lasu grāmatas vai

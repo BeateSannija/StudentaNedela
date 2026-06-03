@@ -2,7 +2,7 @@ const playlists = [
   {
     title: "Ceļā",
     label: "Atskaņošanas saraksts 01",
-    mood: "Esot ceļā starp universitāti un mājām",
+    mood: "Esot ceļā starp universitāti un mājām.",
     image: "/images/soundtrack-road.jpeg",
     songs: [
       { title: "Dancing with Myself", artist: "Billy Idol, Generation X" },
@@ -25,7 +25,7 @@ const playlists = [
   {
     title: "Skrējienam",
     label: "Atskaņošanas saraksts 03",
-    mood: "Kad jāskrien ātri",
+    mood: "Kad jāskrien ātri.",
     image: "/images/soundtrack-run2.jpg",
     songs: [
       { title: "Song 2", artist: "Blur" },
@@ -78,12 +78,12 @@ export function SoundtrackSection() {
           </div>
 
           <h2 className="display-heading text-4xl font-bold leading-[1.3] text-[var(--color-primary)] md:text-6xl">
-            Nedēļas ritmā
+            Nedēļa mūzikas ritmos
           </h2>
 
-          <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
+          <p className="mt-8 max-w-3xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
             Mūzika ir viens no svarīgākajiem manas ikdienas elementiem. To
-            klausos, esot ceļā, mācoties, skrienot un atpūšoties — gatavojot
+            klausos, esot ceļā, mācoties, skrienot, atpūšoties, gatavojot
             ēst, lasot vai pievēršoties citām radošām nodarbēm.
           </p>
         </div>
