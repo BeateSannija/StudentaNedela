@@ -96,7 +96,7 @@ export function RelaxSection() {
               >
                 <div className={isReversed ? "lg:order-2" : ""}>
                   <div
-                    className={`overflow-hidden rounded-[18px] border border-[var(--color-border)] bg-[var(--color-surface)] p-3 shadow-[0_10px_28px_rgba(31,39,71,0.05)] ${imageWidthClass} ${imageAlignClass}`}
+                    className={`overflow-hidden rounded-[18px] border border-[var(--color-border)] bg-[var(--color-surface)] p-3 shadow-[0_10px_28px_rgba(31,39,71,0.05)] dark:border-white/10 dark:bg-[var(--color-surface)]/55 ${imageWidthClass} ${imageAlignClass}`}
                   >
                     <img
                       src={`${import.meta.env.BASE_URL}${hobby.image}`}

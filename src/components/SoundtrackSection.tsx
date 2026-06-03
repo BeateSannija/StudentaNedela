@@ -90,7 +90,7 @@ export function SoundtrackSection() {
           {playlists.map((playlist) => (
             <article
               key={playlist.title}
-              className="group grid gap-4 rounded-[18px] border border-white/30 bg-white/35 p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:bg-white/45 hover:shadow-[0_10px_30px_rgba(0,0,0,0.06)] sm:grid-cols-[145px_1fr]"
+              className="group grid gap-4 rounded-[18px] border border-white/30 bg-white/35 p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:bg-white/45 hover:shadow-[0_10px_30px_rgba(0,0,0,0.06)] sm:grid-cols-[145px_1fr] dark:border-white/10 dark:bg-[var(--color-surface)]/55 dark:hover:bg-[var(--color-surface)]/65"
             >
               <div className="aspect-square overflow-hidden rounded-[14px]">
                 <img

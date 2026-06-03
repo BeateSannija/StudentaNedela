@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* ========================================
    THEME VARIABLES
@@ -31,9 +32,12 @@
   --color-text: #f4f1eb;
   --color-muted: #b5bbc8;
   /* --color-primary: #7a2a24; */
-  --color-primary: #8a3530;
+  --color-primary: #963f39;
   --color-blue: #8fa9c9;
+
+  /* --color-green: #97a83c; */
   --color-green: #8a9f46;
+
   --color-border: #3a3f48;
 }
 
@@ -169,9 +173,14 @@ ol {
       transparent 30%
     ),
     radial-gradient(
-      circle at 28% 78%,
+      circle at 35% 58%,
       rgba(151, 168, 60, 0.35) 0%,
       transparent 28%
+    ),
+    radial-gradient(
+      circle at 18% 78%,
+      rgba(151, 168, 60, 0.35) 0%,
+      transparent 20%
     ),
     radial-gradient(
       circle at 78% 82%,
@@ -190,13 +199,48 @@ ol {
   );
 }
 
+.dark .hero-gradient {
+  background:
+    radial-gradient(
+      circle at 82% 25%,
+      rgba(143, 169, 201, 0.45) 0%,
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 28% 78%,
+      rgba(138, 159, 70, 0.22) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 76% 82%,
+      rgba(138, 53, 48, 0.22) 0%,
+      transparent 36%
+    ),
+    var(--color-bg);
+}
 
 .soundtrack-gradient {
   background:
-    radial-gradient(circle at 80% 52%, rgba(151, 168, 60, 0.25) 0%, transparent 20%),
-    radial-gradient(circle at 18% 52%, rgba(151, 168, 60, 0.18) 0%, transparent 20%),
-    radial-gradient(circle at 48% 42%, rgba(151, 168, 60, 0.18) 0%, transparent 26%),
-    radial-gradient(circle at 52% 52%, rgba(171, 195, 226, 0.28) 0%, transparent 30%),
+    radial-gradient(
+      circle at 80% 52%,
+      rgba(151, 168, 60, 0.25) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 18% 52%,
+      rgba(151, 168, 60, 0.18) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 48% 42%,
+      rgba(151, 168, 60, 0.18) 0%,
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 52% 52%,
+      rgba(171, 195, 226, 0.28) 0%,
+      transparent 30%
+    ),
     /* radial-gradient(circle at 28% 60%,rgba(76,5,12,0.20) 0%,transparent 26%), */
     var(--color-bg);
 }
@@ -220,3 +264,21 @@ ol {
     );
 }
 
+.dark .food-hero-gradient {
+  background:
+    radial-gradient(
+      circle at 65% 48%,
+      rgba(143, 169, 201, 0.20) 0%,
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 28% 48%,
+      rgba(127, 143, 61, 0.16) 0%,
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 62% 35%,
+      rgba(150, 63, 57, 0.18) 0%,
+      transparent 30%
+    );
+}

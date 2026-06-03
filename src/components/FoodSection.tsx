@@ -4,8 +4,8 @@ const snacks = [
     note: "Īsam enerģijas boostam.",
   },
   {
-    name: "Proteīna batoniņi",
-    note: "Kad starp lekcijām nav laika.",
+    name: "Banānu pankūkas",
+    note: "10 minūtēs ir gatavs",
   },
   {
     name: "Avokado maizīte",
@@ -17,19 +17,23 @@ const snacks = [
   },
 ];
 
-export function FoodSection() {
+type FoodSectionProps = {
+  isDark: boolean;
+};
+
+export function FoodSection({ isDark }: FoodSectionProps) {
+  const cupcakeImage = isDark
+    ? `${import.meta.env.BASE_URL}images/cupcake-white.png`
+    : `${import.meta.env.BASE_URL}images/cupcake-black.png`;
   return (
-    <section
-      id="food"
-      className="relative overflow-hidden pb-8 pt-8"
-    >
+    <section id="food" className="relative overflow-hidden pb-8 pt-8">
       <div className="container">
         <div className="grid gap-8 lg:grid-cols-[0.92fr_1fr] lg:items-center">
           <div className="relative hidden min-h-[420px] items-center justify-center overflow-visible lg:flex">
             <div className="food-hero-gradient pointer-events-none absolute -left-40 -top-32 h-[760px] w-[900px] blur-3xl" />
 
             <img
-              src={`${import.meta.env.BASE_URL}images/cupcake-black.png`}
+              src={cupcakeImage}
               aria-hidden="true"
               className="relative z-10 mx-auto h-auto max-h-[280px] w-auto object-contain opacity-95"
             />
@@ -42,8 +46,6 @@ export function FoodSection() {
             </p>
 
             <div className="relative mt-3 mb-2">
-              <div className="absolute bottom-[0.42em] left-[2.2em] h-3 w-[4.6em] -rotate-1 bg-[var(--color-green)] opacity-75" />
-
               <h2 className="relative display-heading text-4xl font-bold leading-[1.1] text-[var(--color-primary)] md:text-6xl">
                 Mani mīļākie našķi
               </h2>
@@ -60,15 +62,14 @@ export function FoodSection() {
               {snacks.map((snack, index) => (
                 <article
                   key={snack.name}
-                  className="group grid gap-3 border-b border-[var(--color-border)] py-4 sm:grid-cols-[54px_1fr]"
+                  className="grid gap-3 border-b border-[var(--color-border)] py-4 sm:grid-cols-[54px_1fr]"
                 >
                   <span className="text-sm font-bold tracking-[0.25em] text-[var(--color-primary)]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
                   <div>
-                    {/* <h3 className="text-2xl font-extrabold tracking-tight transition-colors duration-300 group-hover:text-[var(--color-primary)]"> */}
-                    <h3 className="text-[1.35rem] font-extrabold tracking-tight transition-colors duration-300 group-hover:text-[var(--color-primary)]">
+                    <h3 className="text-[1.35rem] font-extrabold tracking-tight">
                       {snack.name}
                     </h3>
 

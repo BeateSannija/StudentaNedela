@@ -38,11 +38,8 @@ function App() {
 
   return (
     <main>
-      <NavbarSection
-  isDark={isDark}
-  toggleTheme={toggleTheme}
-/>
-      <HeroSection />
+      <NavbarSection isDark={isDark} toggleTheme={toggleTheme} />
+      <HeroSection isDark={isDark} />
 
       <BackpackSection />
       <SectionDivider />
@@ -53,15 +50,13 @@ function App() {
       <ScheduleSection />
       <SectionDivider />
 
-      <FoodSection />
+      <FoodSection isDark={isDark}/>
       <SectionDivider />
 
       <SoundtrackSection />
       <SectionDivider />
 
       <RelaxSection />
-      <SectionDivider />
-
       <Footer />
     </main>
   );

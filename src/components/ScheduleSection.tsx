@@ -123,10 +123,25 @@ const events = [
   },
 ];
 
+// const legendItems = [
+//   { label: "Studijas", className: "bg-[#cad68f]" },
+//   { label: "Sports", className: "bg-[#c3d6f0]" },
+//   { label: "Privātstundas", className: "bg-[#dfc2c8]" },
+// ];
+
 const legendItems = [
-  { label: "Studijas", className: "bg-[#cad68f]" },
-  { label: "Sports", className: "bg-[#c3d6f0]" },
-  { label: "Privātstundas", className: "bg-[#dfc2c8]" },
+  {
+    label: "Studijas",
+    className: "bg-[#cad68f] dark:bg-[#6f7f38]",
+  },
+  {
+    label: "Sports",
+    className: "bg-[#c3d6f0] dark:bg-[#4f6682]",
+  },
+  {
+    label: "Privātstundas",
+    className: "bg-[#dfc2c8] dark:bg-[#7a4d55]",
+  },
 ];
 
 const startHour = 8;
@@ -142,23 +157,23 @@ function getEventStyle(start: number, end: number) {
 
 function getEventClass(category?: string) {
   if (category === "sports") {
-    return "bg-[#c3d6f0]";
+    return "bg-[#c3d6f0] text-[var(--color-text)] dark:bg-[#4f6682] dark:text-[#f4f1eb]";
   }
 
   if (category === "private") {
-    return "bg-[#dfc2c8]";
+    return "bg-[#dfc2c8] text-[var(--color-text)] dark:bg-[#7a4d55] dark:text-[#f4f1eb]";
   }
 
-  return "bg-[#cad68f]";
+  return "bg-[#cad68f] text-[var(--color-text)] dark:bg-[#6f7f38] dark:text-[#f4f1eb]";
 }
 
 export function ScheduleSection() {
   return (
     <section id="schedule" className="section">
       <div className="container">
-        <div className="mb-6 max-w-3xl space-y-4">
+        <div className="mb-6 max-w-3xl">
           <div className="relative inline-block">
-            <span className="absolute -left-3 top-1/2 h-7 w-[calc(100%+1.5rem)] -translate-y-1/2 bg-[var(--color-green)]" />
+            <div className="absolute -left-4 top-0 h-7 w-36 rotate-1 bg-[var(--color-green)]" />
             <p className="relative text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">
               Grafiks
             </p>
@@ -174,7 +189,7 @@ export function ScheduleSection() {
           </p>
         </div>
 
-        <div className="mb-5 inline-flex flex-wrap items-center gap-5 rounded-full border border-white/30 bg-white/30 px-5 py-3 text-sm font-semibold text-[var(--color-muted)] backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.035)]">
+        <div className="mb-5 inline-flex flex-wrap items-center gap-5 rounded-full border border-white/30 bg-white/30 px-5 py-3 text-sm font-semibold text-[var(--color-muted)] backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.035)] dark:border-white/10 dark:bg-[var(--color-surface)]/55">
           {legendItems.map((item) => (
             <div key={item.label} className="flex items-center gap-2">
               <span
@@ -197,7 +212,7 @@ export function ScheduleSection() {
             return (
               <div
                 key={day}
-                className="rounded-3xl border border-white/30 bg-white/35 p-5 backdrop-blur-xl"
+                className="rounded-3xl border border-white/30 bg-white/35 p-5 backdrop-blur-xl dark:border-white/10 dark:bg-[var(--color-surface)]/55"
               >
                 <h3 className="mb-4 text-lg font-extrabold uppercase">{day}</h3>
 
@@ -221,7 +236,7 @@ export function ScheduleSection() {
         </div>
 
         <div className="hidden md:block">
-          <div className="overflow-x-auto rounded-[1.5rem] border border-white/30 bg-white/35 p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl">
+          <div className="overflow-x-auto rounded-[1.5rem] border border-white/30 bg-white/35 p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl dark:border-white/10 dark:bg-[var(--color-surface)]/55">
             <div className="min-w-[980px]">
               <div className="grid grid-cols-[72px_repeat(7,1fr)]">
                 <div aria-hidden="true" />
@@ -278,7 +293,7 @@ export function ScheduleSection() {
                       .map((event) => (
                         <article
                           key={`${event.day}-${event.title}-${event.time}`}
-                          className={`absolute left-1.5 right-1.5 rounded-xl border border-white/40 p-2 text-xs shadow-[0_6px_16px_rgba(31,39,71,0.06)] ${getEventClass(
+                          className={`absolute left-1.5 right-1.5 rounded-xl border border-white/40 p-2 text-xs shadow-[0_6px_16px_rgba(31,39,71,0.06)] dark:border-transparent ${getEventClass(
                             event.category,
                           )}`}
                           style={getEventStyle(event.start, event.end)}

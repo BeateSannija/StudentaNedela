@@ -24,7 +24,7 @@ export function NavbarSection({ isDark, toggleTheme }: NavbarSectionProps) {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="relative z-50 rounded-full border border-white/30 bg-white/40 p-3 text-slate-700 backdrop-blur-xl md:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
+        className="relative z-50 rounded-full border border-white/30 bg-white/40 p-3 text-[var(--color-text)] backdrop-blur-xl md:hidden dark:bg-white/10 dark:border-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
         aria-label={isOpen ? "Aizvērt navigāciju" : "Atvērt navigāciju"}
         aria-expanded={isOpen}
         aria-controls="mobile-navigation"
@@ -48,7 +48,7 @@ export function NavbarSection({ isDark, toggleTheme }: NavbarSectionProps) {
 
       <nav
         aria-label="Galvenā navigācija"
-        className="hidden rounded-full border border-white/30 bg-white/40 px-5 py-3 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl md:block"
+        className="hidden rounded-full border border-white/30 bg-white/40 px-5 py-3 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl md:block dark:border-white/10 dark:bg-[var(--color-surface)]/55 dark:shadow-[0_10px_30px_rgba(0,0,0,0.22)]"
       >
         <ul className="flex items-center gap-5 text-sm font-bold">
           {navItems.map((item) => (
@@ -88,7 +88,7 @@ export function NavbarSection({ isDark, toggleTheme }: NavbarSectionProps) {
           <nav
             id="mobile-navigation"
             aria-label="Mobilā navigācija"
-            className="absolute right-0 top-0 h-full w-52 bg-stone-50/80 px-8 py-20 shadow-xl"
+            className="absolute right-0 top-0 h-full w-52 bg-stone-50/80 px-8 py-20 shadow-xl dark:bg-[var(--color-surface)]/90 dark:text-[var(--color-text)]"
           >
             <ul className="space-y-6 text-right text-xl font-bold">
               {navItems.map((item) => (
@@ -106,7 +106,7 @@ export function NavbarSection({ isDark, toggleTheme }: NavbarSectionProps) {
                 <button
                   type="button"
                   onClick={toggleTheme}
-                  className="mt-8 ml-auto flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-white/40 backdrop-blur-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
+                  className="mt-8 ml-auto flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-white/40 backdrop-blur-xl dark:border-white/20 dark:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
                   aria-label={
                     isDark ? "Ieslēgt gaišo režīmu" : "Ieslēgt tumšo režīmu"
                   }

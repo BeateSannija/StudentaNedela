@@ -168,14 +168,14 @@ export function JourneySection() {
             No mājām līdz universitātei
           </h2>
 
-           <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
+          <p className="mt-8 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
             Ikdienas maršruts, kas savieno mierīgu rītu, vilciena ritmu un
             studiju dienas sākumu pilsētā.
           </p>
         </div>
 
         <div className="relative mx-auto max-w-5xl">
-          <div className="absolute bottom-6 left-[1.1rem] top-0 w-[3px] rounded-full bg-gradient-to-b from-[var(--color-blue)] via-[var(--color-primary)] to-[var(--color-green)] md:left-1/2" />
+          <div className="absolute bottom-6 left-[1.1rem] top-0 w-[3px] rounded-full bg-[var(--color-border)] md:left-1/2" />
 
           <div className="space-y-6 md:space-y-4">
             {journeySteps.map((step, index) => {
@@ -187,7 +187,14 @@ export function JourneySection() {
                   key={step.id}
                   className="relative grid gap-6 md:grid-cols-2 md:gap-0"
                 >
-                  <span className="absolute left-[1.1rem] top-3 z-10 h-5 w-5 -translate-x-1/2 rounded-full border-[5px] border-[var(--color-bg)] bg-[var(--color-primary)] shadow-[0_0_0_3px_#97A83C] md:left-1/2" />
+                  {/* Mobile point */}
+                  <span className="absolute left-[1.1rem] top-3 z-10 h-5 w-5 -translate-x-1/2 rounded-full border-[5px] border-[var(--color-bg)] bg-[var(--color-primary)] shadow-[0_0_0_3px_var(--color-green)] md:hidden" />
+
+                  {/* Desktop point */}
+                  <span
+                    className="absolute left-1/2 top-3 z-10 hidden h-6 w-6 rounded-full border-[6px] border-[var(--color-bg)] bg-[var(--color-primary)] shadow-[0_0_0_3px_var(--color-green)] md:block"
+                    style={{ transform: "translateX(calc(-50% + 1.5px))" }}
+                  />
 
                   <span
                     className={`absolute top-[1.35rem] hidden h-px w-12 bg-[var(--color-border)] md:block ${
@@ -207,7 +214,7 @@ export function JourneySection() {
                         !isRight ? "md:justify-end" : ""
                       }`}
                     >
-                      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-surface)] text-[var(--color-primary)] shadow-sm ring-1 ring-[var(--color-border)]">
+                      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-surface)] text-[var(--color-primary)] shadow-sm ring-1 ring-[var(--color-border)] dark:bg-white/5 dark:text-[#b85a52]">
                         <Icon />
                       </span>
 
