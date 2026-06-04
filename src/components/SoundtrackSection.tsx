@@ -2,7 +2,7 @@ const playlists = [
   {
     title: "Ceļā",
     label: "Atskaņošanas saraksts 01",
-    mood: "Esot ceļā starp universitāti un mājām.",
+    mood: "Esot ceļā starp universitāti un mājām. Šajā sarakstā parasti izvēlos dziesmas, kas ir priecīgas un rada cerību pilnas izjūtas, jo šis saraksts ietekmēs visu manu atlikušo dienu.",
     image: "/images/soundtrack-road.jpeg",
     songs: [
       { title: "Dancing with Myself", artist: "Billy Idol, Generation X" },
@@ -14,7 +14,7 @@ const playlists = [
     title: "Motivācijai",
     label: "Atskaņošanas saraksts 02",
     // mood: "Mācības jāmīl :)",
-    mood: "Lai vieglāk pieķertos darbiem.",
+    mood: "Šīs dziesmas klausos brīžos, kad jāpiespiežas sākt darbu vai jāpabeidz kāds uzdevums, kuram trūkst enerģijas.",
     image: "/images/soundtrack-motivation.jpg",
     songs: [
       { title: "Eye of the Tiger", artist: "Survivor" },
@@ -25,7 +25,7 @@ const playlists = [
   {
     title: "Skrējienam",
     label: "Atskaņošanas saraksts 03",
-    mood: "Kad jāskrien ātri.",
+    mood: "Šeit svarīgs ir temps un ritms, jo mūzika palīdz noturēt skriešanas tempu un padara treniņu vieglāku. Kā arī nenāk par sliktu, ja dziesmas liek pasmaidīt, jo visiem ir zināms, ka, skrienot ir jāsmaida, lai skrietu ātrāk.",
     image: "/images/soundtrack-run2.jpg",
     songs: [
       { title: "Song 2", artist: "Blur" },
@@ -36,7 +36,7 @@ const playlists = [
   {
     title: "Atelpai",
     label: "Atskaņošanas saraksts 04",
-    mood: "Miers pēc garas dienas.",
+    mood: "Miers pēc garas dienas. Šis saraksts vairāk saistīts ar mieru, vakariem, gatavošanu un brīžiem, kad varu nedomāt par mācībām un esmu nopelnījusi atpūtu.",
     image: "/images/soundtrack-rest.jpeg",
     songs: [
       { title: "Free", artist: "Florence + The Machine" },
@@ -69,7 +69,7 @@ export function SoundtrackSection() {
   return (
     <section id="soundtrack" className="soundtrack-gradient section">
       <div className="container">
-        <div className="mb-6 max-w-2xl">
+        <div className="mb-6 max-w-3xl">
           <div className="relative inline-block">
             <span className="absolute -left-2 top-1/2 h-7 w-[calc(100%+1rem)] -translate-y-1/2 -rotate-1 bg-[var(--color-green)]" />
             <p className="relative text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-primary)]">
@@ -83,8 +83,11 @@ export function SoundtrackSection() {
 
           <p className="mt-8 max-w-3xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
             Mūzika ir viens no svarīgākajiem manas ikdienas elementiem. To
-            klausos, esot ceļā, mācoties, skrienot, atpūšoties, gatavojot
-            ēst, lasot vai pievēršoties citām radošām nodarbēm.
+            klausos, esot ceļā, mācoties, skrienot, atpūšoties, gatavojot ēst,
+            lasot vai pievēršoties citām radošām nodarbēm. Dažādām dienas
+            situācijām izvēlos atšķirīgu noskaņu, tāpēc sadaļā atskaņošanas
+            saraksti sadalīti pēc aktivitātēm. Kopumā cenšos klausīties priecīgu
+            vai vismaz enerģisku mūziku.
           </p>
         </div>
 
@@ -112,7 +115,7 @@ export function SoundtrackSection() {
                     {playlist.title}
                   </h3>
 
-                  <p className="mt-2 max-w-md text-sm leading-6 text-[var(--color-muted)]">
+                  <p className="mt-2 max-w-md text-sm leading-6 text-[var(--color-muted)] indent-8">
                     {playlist.mood}
                   </p>
                 </div>

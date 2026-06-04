@@ -127,14 +127,20 @@ const legendItems = [
   {
     label: "Studijas",
     className: "bg-[#cad68f] dark:bg-[#6f7f38]",
+    description:
+      "Lekcijas un praktiskie darbi veido lielāko daļu manas akadēmiskās nedēļas. Grafikā redzami šī semestra (2026.gada pavasris) kursi",
   },
   {
     label: "Sports",
     className: "bg-[#c3d6f0] dark:bg-[#4f6682]",
+    description:
+      'Skriešana ir viens no maniem svarīgākajiem hobijiem ārpus studijām. Regulāri treniņi palīdz uzturēt enerģiju un līdzsvaru starp mācībām un atpūtu. Treniņus cenšos uztvert kā "svētus" - tos nedrīkstu atcelt, ja vien tiešām ir nogurums.',
   },
   {
     label: "Privātstundas",
     className: "bg-[#dfc2c8] dark:bg-[#7a4d55]",
+    description:
+      "Papildus studijām vadu vācu valodas privātstundas. Tās ir regulāra nedēļas daļa, kas ļauj attīstīt komunikācijas un mācīšanas prasmes.",
   },
 ];
 
@@ -185,15 +191,27 @@ export function ScheduleSection() {
           </p>
         </div>
 
-        <div className="mb-5 inline-flex flex-wrap items-center gap-5 rounded-full border border-white/30 bg-white/30 px-5 py-3 text-sm font-semibold text-[var(--color-muted)] backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.035)] dark:border-white/10 dark:bg-[var(--color-surface)]/55">
+        <div className="mb-8 grid gap-4 md:grid-cols-3">
           {legendItems.map((item) => (
-            <div key={item.label} className="flex items-center gap-2">
-              <span
-                aria-hidden="true"
-                className={`h-3 w-3 rounded-full ${item.className}`}
-              />
-              {item.label}
-            </div>
+            <article
+              key={item.label}
+              className="rounded-3xl border border-white/40 bg-white/35 p-5 shadow-[0_14px_35px_rgba(31,39,71,0.07)] backdrop-blur-xl dark:border-white/10 dark:bg-[var(--color-surface)]/55"
+            >
+              <div className="flex items-center gap-3">
+                <span
+                  aria-hidden="true"
+                  className={`h-3.5 w-3.5 rounded-full ${item.className}`}
+                />
+
+                <h3 className="text-sm font-extrabold uppercase tracking-[0.3em] text-[var(--color-text)]">
+                  {item.label}
+                </h3>
+              </div>
+
+              <p className="mt-3 text-sm leading-[1.6] text-[var(--color-muted)] indent-8">
+                {item.description}
+              </p>
+            </article>
           ))}
         </div>
 

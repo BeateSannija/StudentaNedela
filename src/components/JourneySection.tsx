@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function HouseIcon() {
   return (
     <svg
@@ -117,41 +119,54 @@ const journeySteps = [
     id: "home",
     title: "Mājas",
     text: "Paēdu brokastis un dodos ceļā.",
+    detailText:
+      "Diena parasti sākas ar brokastīm un somas pārbaudīšanu, lai pārliecinātos, ka līdzi ir dators, ūdens pudele un citas studijām vajadzīgās lietas. Man patīk iziet no mājām laikus, jo tad ceļš uz universitāti sākas mierīgāk un nav jāsteidzas.",
     icon: HouseIcon,
   },
   {
     id: "walk-to-station",
     title: "Pastaiga uz staciju",
     text: "30 minūšu pastaiga līdz stacijai.",
+    detailText:
+      "Pastaiga līdz stacijai ir pirmā dienas kustību daļa. Tā palīdz pamosties un izkustēties pirms garākas sēdēšanas lekcijās vai vilcienā. Šajā laikā bieži klausos mūziku. Cenšos klausīties tieši priecīgu un pacilātāku mūziku.",
     icon: WalkIcon,
   },
   {
     id: "train",
     title: "Vilciens",
     text: "45 minūtes mūzikai, mācībām vai sarunām ar draugiem.",
+    detailText:
+      "Vilciens ir viens no mierīgākajiem ceļa posmiem. Reizēm šo laiku izmantoju, lai pildītu mājasdarbus, citreiz vienkārši klausos mūziku un atpūšos, bet lielākoties runāju ar draugiem.",
     icon: TrainIcon,
   },
   {
     id: "riga-station",
     title: "Rīgas stacija",
     text: "Izkāpšanas punkts, lai dotos uz universitāti.",
+    detailText:
+      "Rīgas stacija ir pārejas punkts starp vilciena braucienu un pilsētas posmu. Šeit maršruts kļūst aktīvāks, jo apkārt ir vairāk cilvēku un pilsētas kustības. Dažkārt aizeju pēc kāda našķa uz veikalu pirms lekcijām.",
     icon: CityIcon,
   },
   {
     id: "walk-to-university",
     title: "Pastaiga uz universitāti",
     text: "10 minūšu pastaiga līdz universitātei.",
+    detailText:
+      "Pēdējā pastaiga līdz universitātei parasti ir īsa, bet tā palīdz pilnībā pārslēgties uz studiju vidi.",
     icon: WalkIcon,
   },
   {
     id: "university",
     title: "Universitāte",
     text: "Galamērķis sasniegts.",
+    detailText:
+      "Universitātē sākas dienas galvenā daļa – lekcijas, praktiskie darbi un sarunas ar kursabiedriem. Lai gan ceļš līdz universitātei aizņem apmēram pusotru stundu, tas ir kļuvis par ierastu manas nedēļas ritma daļu.",
     icon: UniIcon,
   },
 ];
 
 export function JourneySection() {
+  const [activeStepId, setActiveStepId] = useState(journeySteps[0].id);
   return (
     <section id="route" className="section">
       <div className="container">
@@ -209,21 +224,49 @@ export function JourneySection() {
                         : "md:col-start-1 md:pr-20 md:text-right"
                     }`}
                   >
-                    <h3
-                      className={`flex items-center gap-3 text-2xl font-extrabold tracking-tight text-[var(--color-text)] ${
-                        !isRight ? "md:justify-end" : ""
-                      }`}
+                    <button
+                      type="button"
+                      onClick={() => setActiveStepId(step.id)}
+                      aria-controls={`journey-detail-${step.id}`}
+                      aria-expanded={activeStepId === step.id}
+                      className={`group flex items-center gap-3 text-left text-2xl font-extrabold tracking-tight transition-all duration-200 hover:-translate-y-0.5 hover:text-[var(--color-primary)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-green)] ${
+                        activeStepId === step.id
+                          ? "text-[var(--color-primary)]"
+                          : "text-[var(--color-text)]"
+                      } ${!isRight ? "md:ml-auto md:flex-row-reverse md:text-right" : ""}`}
                     >
-                      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-surface)] text-[var(--color-primary)] shadow-sm ring-1 ring-[var(--color-border)] dark:bg-white/5 dark:text-[#b85a52]">
+                      <span
+                        className={`flex h-10 w-10 items-center justify-center rounded-full shadow-sm ring-1 transition-all duration-200 group-hover:bg-[var(--color-green)]/15 group-hover:text-[var(--color-primary)] group-hover:ring-[var(--color-green)] dark:bg-white/5 dark:text-[#b85a52] ${
+                          activeStepId === step.id
+                            ? "scale-110 bg-[var(--color-green)]/15 text-[var(--color-primary)] ring-[var(--color-green)]"
+                            : "bg-[var(--color-surface)] text-[var(--color-primary)] ring-[var(--color-border)]"
+                        }`}
+                      >
                         <Icon />
                       </span>
 
                       {step.title}
-                    </h3>
+                    </button>
 
                     <p className="mt-2 max-w-md text-base leading-7 text-[var(--color-muted)]">
                       {step.text}
                     </p>
+
+                    {activeStepId === step.id && (
+                      <div
+                        id={`journey-detail-${step.id}`}
+                        className={`mt-4 max-w-xl rounded-3xl border border-white/60 bg-white/45 p-5 text-left shadow-[0_4px_20px_rgba(0,0,0,0.035)] backdrop-blur-xl dark:border-white/10 dark:bg-white/5 ${
+                          !isRight ? "md:ml-auto" : ""
+                        }`}
+                        // className={`mt-4 max-w-xl rounded-3xl border border-white/60 bg-white/45 p-5 text-left shadow-[0_18px_45px_rgba(31,39,71,0.10)] backdrop-blur-xl dark:border-white/10 dark:bg-white/5 ${
+                        //   !isRight ? "md:ml-auto" : ""
+                        // }`}
+                      >
+                        <p className="text-base leading-[1.6] text-[var(--color-muted)]">
+                          {step.detailText}
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </article>
               );

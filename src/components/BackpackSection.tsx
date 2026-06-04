@@ -2,7 +2,8 @@ const bagItems = [
   {
     number: "01",
     title: "Dators",
-    description: "Galvenais rīks lekciju pierakstiem, mājasdarbiem un kursu darbiem.",
+    description:
+      "Galvenais rīks lekciju pierakstiem, mājasdarbiem un kursu darbiem.",
   },
   {
     number: "02",
@@ -14,13 +15,21 @@ const bagItems = [
     title: "Austiņas",
     description: "Mūzikai, fokusam un trokšņu filtrēšanai.",
   },
-  { number: "04", title: "Našķis", description: "Ātrai enerģijai starp lekcijām un darbiem." },
+  {
+    number: "04",
+    title: "Našķis",
+    description: "Ātrai enerģijai starp lekcijām un darbiem.",
+  },
   {
     number: "05",
     title: "Roku krēms",
     description: "Īpaši noderīgs aukstajos gada mēnešos.",
   },
-  { number: "06", title: "Lūpu balzāms", description: "Viena no tām lietām, kas somā ir vienmēr." },
+  {
+    number: "06",
+    title: "Lūpu balzāms",
+    description: "Viena no tām lietām, kas somā ir vienmēr.",
+  },
   {
     number: "07",
     title: "Dezinfekcijas līdzeklis",
@@ -46,18 +55,19 @@ export function BackpackSection() {
             Mana mugursoma
           </h2>
 
-          <p className="mt-8 max-w-3xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
+          <p className="mt-8 max-w-12xl text-base leading-[1.6] text-[var(--color-muted)] indent-8">
             Lietas, kas gandrīz vienmēr ceļo līdzi — studijām, ceļam un mazām
             pauzēm starp lekcijām.
           </p>
         </div>
 
         <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-          <div className="border border-[var(--color-border)] bg-[var(--color-surface)] p-3 shadow-[0_12px_34px_rgba(31,39,71,0.05)]">
+          {/* <div className="border border-[var(--color-border)] bg-[var(--color-surface)] p-3 shadow-[0_12px_34px_rgba(31,39,71,0.05)]"> */}
+          <div className="rounded-[1.5rem] border border-white/30 bg-white/35 p-3 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-xl dark:border-white/10 dark:bg-[var(--color-surface)]/55">
             <img
               src={`${import.meta.env.BASE_URL}images/backpack.jpg`}
               alt="Mugursomas saturs: dators, ūdens pudele, austiņas, našķi, roku krēms, lūpu balzāms, dezinfekcijas līdzeklis un atslēgas"
-              className="w-full object-cover"
+              className="rounded-3xl w-full object-cover"
             />
           </div>
 
@@ -83,6 +93,18 @@ export function BackpackSection() {
               </article>
             ))}
           </div>
+          <p className="mt-2 text-base leading-[1.6] text-[var(--color-muted)] lg:col-span-2 indent-8">
+            Lai gan katra diena universitātē ir nedaudz atšķirīga, somas saturs
+            diži nemainās un ir lietas, kas manā somā ir vienmēr. Dators ir
+            galvenais darba rīks lekciju pierakstiem, kursa projektiem un
+            mājasdarbiem, savukārt austiņas palīdz koncentrēties gan brauciena
+            laikā, gan strādājot bibliotēkā vai mājās. Garākās studiju dienās
+            līdzi vienmēr ir arī ūdens pudele un kāds našķis, kas palīdz uzturēt
+            enerģiju starp lekcijām. Praktisku iemeslu dēļ somā parasti atrodas
+            arī roku krēms, lūpu balzāms, dezinfekcijas līdzeklis un atslēgas.
+            Lai gan šie priekšmeti šķiet ikdienišķi, tie raksturo manu studenta
+            ikdienu.
+          </p>
         </div>
       </div>
     </section>

@@ -66,28 +66,28 @@ function SnackItem({
 
       <div>
         <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-  <div>
-    <h3 className="text-xl font-extrabold text-[var(--color-text)]">
-      {snack.name}
-    </h3>
+          <div>
+            <h3 className="text-xl font-extrabold text-[var(--color-text)]">
+              {snack.name}
+            </h3>
 
-    <p className="mt-1 text-sm leading-[1.6] text-[var(--color-muted)]">
-      {snack.note}
-    </p>
-  </div>
+            <p className="mt-1 text-sm leading-[1.6] text-[var(--color-muted)]">
+              {snack.note}
+            </p>
+          </div>
 
-  {snack.recipe && (
-    <button
-      type="button"
-      onClick={() => setIsOpen(!isOpen)}
-      aria-expanded={isOpen}
-      aria-controls={recipeId}
-      className="mt-2 w-fit text-[0.7rem] font-extrabold uppercase tracking-[0.32em] text-[var(--color-green)] transition hover:text-[var(--color-primary)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)] sm:mt-1 sm:shrink-0"
-    >
-      {isOpen ? "Paslēpt recepti" : "Skatīt recepti"}
-    </button>
-  )}
-</div>
+          {snack.recipe && (
+            <button
+              type="button"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-expanded={isOpen}
+              aria-controls={recipeId}
+              className="mt-2 w-fit text-[0.7rem] font-extrabold uppercase tracking-[0.32em] text-[var(--color-green)] transition hover:text-[var(--color-primary)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)] sm:mt-1 sm:shrink-0"
+            >
+              {isOpen ? "Paslēpt recepti" : "Skatīt recepti"}
+            </button>
+          )}
+        </div>
 
         {snack.recipe && (
           <>
@@ -143,7 +143,7 @@ export function FoodSection({ isDark }: FoodSectionProps) {
   return (
     <section id="food" className="relative overflow-hidden pb-8 pt-8">
       <div className="container">
-          <div className="grid gap-8 lg:grid-cols-[0.92fr_1fr] lg:items-start">
+        <div className="grid gap-8 lg:grid-cols-[0.92fr_1fr] lg:items-start">
           <div className="relative hidden min-h-[420px] items-center justify-center overflow-visible lg:flex">
             <div className="food-hero-gradient pointer-events-none absolute -left-40 -top-12 h-[760px] w-[900px] blur-3xl" />
 
@@ -165,13 +165,22 @@ export function FoodSection({ isDark }: FoodSectionProps) {
                 Mani mīļākie našķi
               </h2>
             </div>
+            <div className="mt-4 max-w-2xl text-base leading-[1.6] text-[var(--color-muted)]">
+              <p className="indent-8">
+                Našķi starp lekcijām un pauzēs starp mācību sesijām ir svarīga
+                studenta dzīves daļa. Es uzturā lietoju tikai augu valsts
+                produktus, tāpēc ne vienmēr varu izvēlēties pirmo našķi, kas
+                pagadās pa rokai.
+              </p>
 
-            <p className="mt-4 max-w-lg text-base leading-[1.6] text-[var(--color-muted)] indent-8">
-              Našķi starp lekcijām un pauzēs starp mācību sesijām ir svarīga
-              studenta dzīves daļa. Es uzturā lietoju tikai augu valsts
-              produktus, tāpēc ne vienmēr varu izvēlēties pirmo našķi, kas
-              pagadās pa rokai. Šie ir mani mīļākie augu valsts našķi.
-            </p>
+              <p className="mt-4 indent-8">
+                Augu valsts uzturs nozīmē, ka ikdienā nelietoju dzīvnieku
+                izcelsmes produktus, tādēļ bieži meklēju alternatīvas
+                ierastajiem saldumiem un uzkodām. Daļa no maniem iecienītākajiem
+                našķiem ir viegli pagatavojami mājās, savukārt citus iegādājos
+                gatavus.
+              </p>
+            </div>
 
             {/* <div className="mt-5 border-t border-[var(--color-border)]"> */}
             <div className="mt-5">
